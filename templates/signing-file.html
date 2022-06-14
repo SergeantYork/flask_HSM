@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+        <body>
+            <form method="POST" class="form-signin" style="color:black" enctype = "multipart/form-data">
+                {{ form.hidden_tag() }}
+                        <h1>
+                            Signing a file
+                        </h1>
+                                <br>
+                                {{ form.api_key.label() }}
+
+                                {{ form.api_key(class="form-control", placeholder="Enter API key")}}
+
+
+                                {{ form.key_name.label() }}
+
+                                {{ form.key_name(class="form-control", placeholder="Enter signing key")}}
+
+                                {{ form.signing_alg.label() }}
+
+                                {{ form.signing_alg(class="form-control") }}
+
+                                {{ form.digest.label() }}
+
+                                {{ form.digest(class="form-control") }}
+
+                                <br>
+                                <input type = "file" name = "file" />
+                                <br><br>
+
+                                {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+                        </form>
+        </body>
+{% endblock %}
