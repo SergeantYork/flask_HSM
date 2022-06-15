@@ -21,15 +21,15 @@ default_value = '0'
 PATH = os.path.dirname(os.path.realpath(__file__))
 
 
-# sys.stdout = sys.stderr = open('static/flask_server.log', 'wt')
-# logging.basicConfig(filename='static/flask_server.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %("
-#                                                                                    "message)s")
-# formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
-# handler = logging.FileHandler(filename='static/flask_server.log')
-# handler.setFormatter(formatter)
-# logger = logging.getLogger()
-# logger.setLevel(logging.INFO)
-# logger.addHandler(handler)
+sys.stdout = sys.stderr = open('static/flask_server.log', 'wt')
+logging.basicConfig(filename='static/flask_server.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %("
+                                                                                   "message)s")
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+handler = logging.FileHandler(filename='static/flask_server.log')
+handler.setFormatter(formatter)
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+logger.addHandler(handler)
 
 
 @app.route('/')
@@ -55,8 +55,8 @@ def signing_progress():
     if file_type == 'image':
         digest = False
     # flash("{}".format(digest), default_value)
-    # call_streaming_signing(end_point, api_key, in_data=path, out_data='file_signed.txt', key_name=signing_key,
-    #                        operation=signing_algorithm, digest=digest)
+    call_streaming_signing(end_point, api_key, in_data=path, out_data='file_signed.txt', key_name=signing_key,
+                           operation=signing_algorithm, digest=digest)
 
     return render_template('signing-progress.html')
 
@@ -72,10 +72,6 @@ def signing_file():
         file_name = secure_filename(f.filename)
 
         f.save(app.config['UPLOAD_FOLDER'] + file_name)
-
-        file = open(app.config['UPLOAD_FOLDER'] + file_name, "r")
-
-        content = file.read()
 
         session['api_key'] = form.api_key.data
 

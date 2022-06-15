@@ -143,8 +143,7 @@ def signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation
     full_status_string = get_sign(api_endpoint, token, request_id)
     print(full_status_string)
     file_name = str(in_data)
-    file_ending = file_name.split(".")
-    file_ending = file_ending[-1]
+    file_ending = "txt"
 
     with open('{}_signature.{}'.format(in_data, file_ending), 'w') as f:
         f.write('Request response:')
@@ -181,8 +180,7 @@ def signing(api_endpoint, api_key, in_data, out_data, key_name, operation):
     signature_string = get_sign(api_endpoint, token, request_id)
 
     file_name = str(in_data)
-    file_ending = file_name.split(".")
-    file_ending = file_ending[-1]
+    file_ending = "txt"
 
     with open('{}_signature.{}'.format(in_data, file_ending), 'w') as f:
         f.write('Request response:')
