@@ -94,7 +94,8 @@ def signing_file():
 def download_signature():
     path = session.get('path', None)
     file_name = session.get('file_name', None)
-    download_path = ("{}_signature.txt".format(path, file_ending))
+    file_ending = "txt"
+    download_path = ("{}_signature.{}".format(path, file_ending))
     os.remove(os.path.join(app.config['UPLOAD_FOLDER'], file_name))
     return send_file(download_path, as_attachment=True)
 
