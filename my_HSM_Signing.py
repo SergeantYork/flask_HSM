@@ -135,7 +135,7 @@ def signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation
     result_digest = bytearray(fh.read)
     hash_value = base64.b64encode(result_digest).decode("utf-8")
     logging.info("the hash value : {}".format(hash_value))
-    print(hash_value)
+    print("the hash value : {}".format(hash_value))
     api_key = api_key
     api_endpoint = api_endpoint
     key = key_name
