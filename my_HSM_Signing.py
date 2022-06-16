@@ -1,13 +1,23 @@
 import json
+import logging
+
 import requests
 import time
 import hashlib
 import base64
 import os
 
-from time import sleep
 
 PATH = os.path.dirname(os.path.realpath(__file__))
+
+logging.basicConfig(filename='static/flask_server.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %("
+                                                                                   "message)s")
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+handler = logging.FileHandler(filename='static/flask_server.log')
+handler.setFormatter(formatter)
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+logger.addHandler(handler)
 
 
 def append_new_line(file_name, text_to_append):
@@ -33,7 +43,8 @@ def get_auth(api_endpoint, api_key):
     response = requests.request("POST", url, headers=headers, data=payload)
     response_json = response.json()
     response_print = json.dumps(response_json)
-    print("get_auth{}".format(response_print))
+    logging.info("get_auth: {}".format(response_print))
+    print("get_auth: {}".format(response_print))
     return response_json["access_token"]
 
 
@@ -58,7 +69,8 @@ def gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg):
     response = requests.request("POST", url, headers=headers, data=payload)
     response_json = response.json()["request_id"]
     response_print = json.dumps(response_json)
-    print("gen_auth_request_for_sign{}".format(response_print))
+    logging.info("gen_auth_request_for_sign: {}".format(response_print))
+    print("gen_auth_request_for_sign: {}".format(response_print))
     return response_json
 
 
@@ -72,7 +84,8 @@ def check_request_status(token, api_endpoint):
     response = requests.request("GET", url, headers=headers, data=payload)
     response_json = response.json()
     response_print = json.dumps(response_json)
-    print("check_request_status{}".format(response_print))
+    logging.info("check_request_status: {}".format(response_print))
+    print("check_request_status: {}".format(response_print))
     return response_json
 
 
@@ -87,7 +100,8 @@ def get_sign(api_endpoint, token, request_id):
     response = requests.request("POST", url, headers=headers, data=payload)
     response_json = response.json()
     response_print = json.dumps(response_json)
-    print("get_sign{}".format(response_print))
+    logging.info("get_sign: {}".format(response_print))
+    print("get_sign: {}".format(response_print))
     return response_json
 
 
@@ -112,7 +126,8 @@ def hash_file(filename, operation):
             h.update(chunk)
 
     # return the hex representation of digest
-    print(h.digest())
+    logging.info("the digest value : {}".format(h.digest()))
+    print("the digest value : {}".format(h.digest()))
     return h.digest()
 
 
@@ -120,6 +135,7 @@ def signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation
     fh = open("{}".format(in_data), 'rb')
     result_digest = bytearray(fh.read)
     hash_value = base64.b64encode(result_digest).decode("utf-8")
+    logging.info("the hash value : {}".format(hash_value))
     print(hash_value)
     api_key = api_key
     api_endpoint = api_endpoint
@@ -138,10 +154,12 @@ def signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation
         status = check_request_status(token, api_endpoint)
         match = next(d for d in status if d['request_id'] == request_id)
         time.sleep(0.25)
+    logging.info('request approved getting signature')
     print('request approved getting signature')
 
     full_status_string = get_sign(api_endpoint, token, request_id)
-    print(full_status_string)
+    logging.info("get_sign full status respond {}".format(full_status_string))
+    print("get_sign full status respond {}".format(full_status_string))
     file_name = str(in_data)
     file_ending = "txt"
 
@@ -154,7 +172,9 @@ def signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation
 def signing(api_endpoint, api_key, in_data, out_data, key_name, operation):
     result = hash_file(in_data, operation)
     result_digest = bytearray(result)
+    logging.info("the digest value : {}".format(result_digest))
     hash_value = base64.b64encode(result_digest).decode("utf-8")
+    logging.info("the hash value : {}".format(hash_value))
     api_key = api_key
     api_endpoint = api_endpoint
     key = key_name
@@ -175,6 +195,7 @@ def signing(api_endpoint, api_key, in_data, out_data, key_name, operation):
         status = check_request_status(token, api_endpoint)
         match = next(d for d in status if d['request_id'] == request_id)
         time.sleep(0.25)
+    logging.info('request approved getting signature')
     print('request approved getting signature')
 
     signature_string = get_sign(api_endpoint, token, request_id)

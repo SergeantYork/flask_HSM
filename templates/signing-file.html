@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
-
+    <style>
+        #Progress_Status {
+          width: 50%;
+          background-color: #ddd;
+        }
+        #myprogressBar {
+          width: 2%;
+          height: 20px;
+          background-color: #4CAF50;
+        }
+        </style>
 {% block title %}
 {% endblock %}
 
@@ -27,13 +37,31 @@
                                 {{ form.digest.label() }}
 
                                 {{ form.digest(class="form-control") }}
+                                <br>
+                                <input type=file id="media" name=media>
 
                                 <br>
-                                <input type = "file" name = "file" />
-                                <br><br>
-
-                                {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
-
+                                <br>
+                                <div id="Progress_Status">
+                                <div id="myprogressBar">Loading...</div>
+                                </div>
+                                <br>
+                                <button class="btn btn-lg btn-block btn-primary" onclick="update()">Submit</button>
                         </form>
+                        <script>
+                            function update() {
+                                var element = document.getElementById("myprogressBar");
+                                var width = 1;
+                                var identity = setInterval(scene, 1000);
+                                function scene() {
+                                    if (width >= 100) {
+                                        clearInterval(identity);
+                                    } else {
+                                        width++;
+                                        element.style.width = width + '%';
+                                        }
+                                    }
+                            }
+                        </script>
         </body>
 {% endblock %}

@@ -11,4 +11,3 @@ class SigningField(FlaskForm):
                                                                                'Digest')])
     signing_alg = SelectField('Select signing algorithm', choices=[('SHA2-256', 'SHA2-256 bit'), ('SHA3-256',
                                                                                                   'SHA3-256 bit')])
-    submit = SubmitField(label="Submit")

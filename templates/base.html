@@ -17,37 +17,46 @@
           {% endblock %}
       </title>
 	<style type="text/css">
-  body
-  {
-  	font-size: 2rem;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-  	font-family: Fantasy;
-  }
+          body
+          {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: left;
+            font-family: Fantasy;
+          }
 
-  h1
-  {
-    font-size:48px;
-    margin-top:0;
-    font-family:Fantasy;
-    text-shadow:2px 0 15px #292929;
-    letter-spacing:4px;
-    text-decoration:none;
-    color:#000000;
-  }
+          h1
+          {
+            font-size:48px;
+            margin-top:0;
+            font-family:Fantasy;
+            text-shadow:2px 0 15px #292929;
+            letter-spacing:4px;
+            text-decoration:none;
+            color:#000000;
+          }
 
-  #banner
-  {
-    width:1080px;
-    height:960px;
-    text-align:center;
-    background-repeat:no-repeat;
-    border-radius:5px;
-    margin:90px auto auto;
-    padding:80px 0;
-  }
-	</style>
+          #banner
+          {
+            width:1080px;
+            height:960px;
+            text-align:center;
+            background-repeat:no-repeat;
+            border-radius:5px;
+            margin:90px auto auto;
+            padding:80px 0;
+          }
+          #Progress_Status {
+          width: 100%;
+          background-color: #ddd;
+        }
+        #myprogressBar {
+          width: 2%;
+          height: 40px;
+          background-color: #4CAF50;
+        }
+    </style>
 		<header class="intro-header" style="background-image: url({{ url_for('static', filename='home.jpg') }})">
 
 

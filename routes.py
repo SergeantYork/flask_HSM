@@ -1,12 +1,13 @@
+import contextlib
 import os
 import shutil
+import time
 import sys
 import logging
-import time
 
 from flask import (
     render_template,
-    Flask, request, flash, url_for, session, send_file)
+    Flask, request, url_for, session, send_file)
 from werkzeug.utils import redirect, secure_filename
 
 from models import SigningField
@@ -20,8 +21,8 @@ end_point = "https://eu.smartkey.io/"
 default_value = '0'
 PATH = os.path.dirname(os.path.realpath(__file__))
 
+# sys.stdout = sys.stderr = open('static/flask_server.log', 'wt')
 
-sys.stdout = sys.stderr = open('static/flask_server.log', 'wt')
 logging.basicConfig(filename='static/flask_server.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %("
                                                                                    "message)s")
 formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
@@ -37,7 +38,7 @@ def home_page():
     return render_template('index.html')
 
 
-@app.route('/thank-you')
+@app.route('/signing-progress')
 def signing_progress():
     digest = True
     api_key = session.get('api_key', None)
@@ -55,8 +56,10 @@ def signing_progress():
     if file_type == 'image':
         digest = False
     # flash("{}".format(digest), default_value)
+    logging.info('waiting for quorum approval')
     call_streaming_signing(end_point, api_key, in_data=path, out_data='file_signed.txt', key_name=signing_key,
                            operation=signing_algorithm, digest=digest)
+    logging.info('Request approved')
 
     return render_template('signing-progress.html')
 
@@ -67,7 +70,8 @@ def signing_file():
     form = SigningField()
 
     if form.is_submitted():
-        f = request.files['file']
+
+        f = request.files['media']
 
         file_name = secure_filename(f.filename)
 
