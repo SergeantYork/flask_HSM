@@ -7,6 +7,9 @@ import hashlib
 import base64
 import os
 
+import termcolor
+from termcolor import colored
+
 
 PATH = os.path.dirname(os.path.realpath(__file__))
 
@@ -44,7 +47,6 @@ def get_auth(api_endpoint, api_key):
     response_json = response.json()
     response_print = json.dumps(response_json)
     logging.info("get_auth: {}".format(response_print))
-    print("get_auth: {}".format(response_print))
     return response_json["access_token"]
 
 
@@ -70,7 +72,6 @@ def gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg):
     response_json = response.json()["request_id"]
     response_print = json.dumps(response_json)
     logging.info("gen_auth_request_for_sign: {}".format(response_print))
-    print("gen_auth_request_for_sign: {}".format(response_print))
     return response_json
 
 
@@ -85,7 +86,6 @@ def check_request_status(token, api_endpoint):
     response_json = response.json()
     response_print = json.dumps(response_json)
     logging.info("check_request_status: {}".format(response_print))
-    print("check_request_status: {}".format(response_print))
     return response_json
 
 
@@ -101,7 +101,6 @@ def get_sign(api_endpoint, token, request_id):
     response_json = response.json()
     response_print = json.dumps(response_json)
     logging.info("get_sign: {}".format(response_print))
-    print("get_sign: {}".format(response_print))
     return response_json
 
 
@@ -172,6 +171,8 @@ def signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation
 def signing(api_endpoint, api_key, in_data, out_data, key_name, operation):
     result = hash_file(in_data, operation)
     result_digest = bytearray(result)
+    print("SHA3-Digest Generation")
+
     logging.info("the digest value : {}".format(result_digest))
     hash_value = base64.b64encode(result_digest).decode("utf-8")
     logging.info("the hash value : {}".format(hash_value))
@@ -187,7 +188,6 @@ def signing(api_endpoint, api_key, in_data, out_data, key_name, operation):
     request_id = gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg)
 
     print("my digest:{}".format(hash_value))
-    print("SHA3-Digest Generation")
 
     match = {'status': 'PENDING'}
 
@@ -195,12 +195,11 @@ def signing(api_endpoint, api_key, in_data, out_data, key_name, operation):
         status = check_request_status(token, api_endpoint)
         match = next(d for d in status if d['request_id'] == request_id)
         time.sleep(0.25)
-    logging.info('request approved getting signature')
-    print('request approved getting signature')
+    logging.info('Request approved getting signature')
+    print('Request approved getting signature')
 
     signature_string = get_sign(api_endpoint, token, request_id)
 
-    file_name = str(in_data)
     file_ending = "txt"
 
     with open('{}_signature.{}'.format(in_data, file_ending), 'w') as f:
@@ -209,6 +208,8 @@ def signing(api_endpoint, api_key, in_data, out_data, key_name, operation):
     print('{}_signature.{}'.format(in_data, file_ending))
     append_new_line('{}_signature.{}'.format(in_data, file_ending),
                     "{}".format(signature_string))
+    print("\n")
+    termcolor.cprint('The process finished your signature is ready please download from web page', 'green')
 
 
 def main(api_endpoint, api_key, in_data, out_data, key_name, operation, digest):
