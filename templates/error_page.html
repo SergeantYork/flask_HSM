@@ -3,16 +3,10 @@
 {% block title %}{% endblock %}
 
 {% block content %}
-		<h1>Success your signed file is ready</h1>
-        <br>
+		<h1>An error has occurred please check log file for further inspection please contact FST</h1>
+ <br>
 		<p class="lead"></p>
-		    <div class="container">
         <div class="row">
-            <a class="btn btn-success" href="{{url_for('download_signature')}}">
-                <span style="font-size:200%;">Download the signature</span></a>
-        </div>
-                <br>
-                <div class="row">
             <a class="btn btn-success" href="{{url_for('download_log_file')}}">
                 <span style="font-size:200%;">Download the log file</span></a>
         </div>

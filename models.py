@@ -9,5 +9,7 @@ class SigningField(FlaskForm):
     path = StringField(label="Enter file path")
     digest = SelectField('Select image or digest', choices=[(False, 'image'), (True,
                                                                                'Digest')])
-    signing_alg = SelectField('Select signing algorithm', choices=[('SHA2-256', 'SHA2-256 bit'), ('SHA3-256',
-                                                                                                  'SHA3-256 bit')])
+    signing_alg = SelectField('Select signing algorithm', choices=[('SHA2-224', 'SHA2-224 bit'),
+                                                                   ('SHA2-256', 'SHA2-256 bit'),
+                                                                   ('SHA2-384', 'SHA2-384 bit'),
+                                                                   ('SHA2-512', 'SHA2-512 bit')])

@@ -3,9 +3,10 @@
 
 {% block content %}
     <h1>Welcome Faurecian choose your cryptographic operation</h1>
+                <div class="row">
+            <a class="btn btn-success" href="{{url_for('signing_file')}}">
+                <span style="font-size:200%;">Sign a file/digest</span></a>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <ul>
-        <li style="color:"";font-size:45px">
-            <a style="color:#000000;font-family:Fantasy" href="/signing-file">Singing a file </a></li>
-    </ul>
 {% endblock %}

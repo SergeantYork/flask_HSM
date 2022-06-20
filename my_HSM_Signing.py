@@ -1,6 +1,6 @@
 import json
 import logging
-
+import sys
 import requests
 import time
 import hashlib
@@ -11,6 +11,7 @@ import termcolor
 from termcolor import colored
 
 
+# PATH = os.path.dirname(sys.executable) for .exe only
 PATH = os.path.dirname(os.path.realpath(__file__))
 
 logging.basicConfig(filename='static/flask_server.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %("
@@ -107,13 +108,19 @@ def get_sign(api_endpoint, token, request_id):
 def hash_file(filename, operation):
     """"This function returns the SHA-256 hash
    of the file passed into it"""
-
+    print("hash_file address: {}".format(filename))
     # make a hash object
+    if operation == 'SHA2-224':
+        h = hashlib.sha224()
+
     if operation == 'SHA2-256':
         h = hashlib.sha256()
 
-    if operation == 'SHA3-256':
-        h = hashlib.sha3_256()
+    if operation == 'SHA2-384':
+        h = hashlib.sha384()
+
+    if operation == 'SHA2-512':
+        h = hashlib.sha512()
 
     # open file for reading in binary mode
     with open(filename, 'rb') as file:
@@ -131,6 +138,7 @@ def hash_file(filename, operation):
 
 
 def signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation):
+    print("in_data: {}".format(in_data))
     fh = open("{}".format(in_data), 'rb')
     result_digest = bytearray(fh.read)
     hash_value = base64.b64encode(result_digest).decode("utf-8")
@@ -140,10 +148,14 @@ def signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation
     api_endpoint = api_endpoint
     key = key_name
 
-    if operation == 'SHA3-256':
-        alg = 'Sha3256'
+    if operation == 'SHA-224':
+        alg = 'sha224'
     if operation == 'SHA2-256':
         alg = 'Sha256'
+    if operation == 'SHA2-384':
+        alg = 'Sha384'
+    if operation == 'SHA2-512':
+        alg = 'Sha512'
     token = get_auth(api_endpoint, api_key)
     request_id = gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg)
 
@@ -171,7 +183,7 @@ def signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation
 def signing(api_endpoint, api_key, in_data, out_data, key_name, operation):
     result = hash_file(in_data, operation)
     result_digest = bytearray(result)
-    print("SHA3-Digest Generation")
+    print("SHA-Digest Generation")
 
     logging.info("the digest value : {}".format(result_digest))
     hash_value = base64.b64encode(result_digest).decode("utf-8")
@@ -180,11 +192,17 @@ def signing(api_endpoint, api_key, in_data, out_data, key_name, operation):
     api_endpoint = api_endpoint
     key = key_name
 
-    if operation == 'SHA3-256':
-        alg = 'Sha3256'
+    if operation == 'SHA2-224':
+        alg = 'sha224'
     if operation == 'SHA2-256':
         alg = 'Sha256'
+    if operation == 'SHA2-384':
+        alg = 'Sha384'
+    if operation == 'SHA2-512':
+        alg = 'Sha512'
+
     token = get_auth(api_endpoint, api_key)
+
     request_id = gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg)
 
     print("my digest:{}".format(hash_value))

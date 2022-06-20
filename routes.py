@@ -1,5 +1,6 @@
 import contextlib
 import os
+import pathlib
 import shutil
 import time
 import sys
@@ -7,7 +8,7 @@ import logging
 
 from flask import (
     render_template,
-    Flask, request, url_for, session, send_file)
+    Flask, request, url_for, session, send_file, flash)
 from werkzeug.utils import redirect, secure_filename
 
 from models import SigningField
@@ -19,6 +20,9 @@ app.config['SECRET_KEY'] = 'ec9439cfc6c796ae2029594d'
 app.config["UPLOAD_FOLDER"] = "static/"
 end_point = "https://eu.smartkey.io/"
 default_value = '0'
+
+# PATH = os.path.dirname(sys.executable) for .exe only
+
 PATH = os.path.dirname(os.path.realpath(__file__))
 
 # sys.stdout = sys.stderr = open('static/flask_server.log', 'wt')
@@ -45,8 +49,10 @@ def signing_progress():
     signing_key = session.get('signing_key', None)
     file_name = session.get('file_name', None)
     path = PATH + '/static/{}'.format(file_name)
+    session['full_path'] = PATH + '/static/'
     signing_algorithm = session.get('signing_algorithm', None)
     file_type = session.get('digest', None)
+    # flash("{}".format(path), default_value)
 
     # flash("{}".format(api_key), default_value)
     # flash("{}".format(signing_key), default_value)
@@ -56,11 +62,12 @@ def signing_progress():
     if file_type == 'image':
         digest = False
     # flash("{}".format(digest), default_value)
+    logging.info("file path: {}".format(path))
     logging.info('waiting for quorum approval')
     call_streaming_signing(end_point, api_key, in_data=path, out_data='file_signed.txt', key_name=signing_key,
                            operation=signing_algorithm, digest=digest)
     logging.info('Request approved')
-
+    logging.info('status from the routes: {}'.format(session['status']))
     return render_template('signing-progress.html')
 
 
@@ -70,7 +77,6 @@ def signing_file():
     form = SigningField()
 
     if form.is_submitted():
-
         f = request.files['media']
 
         file_name = secure_filename(f.filename)
@@ -96,26 +102,41 @@ def signing_file():
 
 @app.route('/download')
 def download_signature():
-    path = session.get('path', None)
     file_name = session.get('file_name', None)
     file_ending = "txt"
-    download_path = ("{}_signature.{}".format(path, file_ending))
+    full_path = session.get('full_path', None)
+    logger.info('full path download: {}'.format(full_path))
+    download_path = ("{}{}_signature.{}".format(full_path, file_name, file_ending))
+    logger.info('full path download with file name: {}'.format(download_path))
     os.remove(os.path.join(app.config['UPLOAD_FOLDER'], file_name))
     return send_file(download_path, as_attachment=True)
 
 
 @app.route('/download_log')
 def download_log_file():
-    old_name = PATH + '/static/flask_server.log'
-    file_name = session.get('path', None)
+    path = session.get('full_path', None)
+    old_name = path + '/flask_server.log'
+    logger.info('new_name: {}'.format(old_name))
+    file_name = session.get('file_name', None)
     time_stamp = time.time()
-    new_name = PATH + '/{}_{}_log.txt'.format(file_name, time_stamp)
-    # flash("{}".format(new_name), default_value)
+    new_name = path + '/{}_{}_log.txt'.format(file_name, time_stamp)
+    logger.info('new_name: {}'.format(new_name))
     shutil.copy(old_name, new_name)
     download_path = new_name
+    logging.info('download_path: {}'.format(download_path))
     return send_file(download_path, as_attachment=True)
+
+
+@app.errorhandler(500)
+def not_found(e):
+    return render_template('error_page.html'), 500
+
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template('error_page.html'), 404
 
 
 # Run the application
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
