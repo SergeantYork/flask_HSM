@@ -6,10 +6,9 @@ import time
 import hashlib
 import base64
 import os
-
+from flask import render_template
 import termcolor
 from termcolor import colored
-
 
 # PATH = os.path.dirname(sys.executable) for .exe only
 PATH = os.path.dirname(os.path.realpath(__file__))
@@ -158,7 +157,6 @@ def signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation
         alg = 'Sha512'
     token = get_auth(api_endpoint, api_key)
     request_id = gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg)
-
     match = {'status': 'PENDING'}
 
     while match['status'] == 'PENDING':
@@ -171,7 +169,6 @@ def signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation
     full_status_string = get_sign(api_endpoint, token, request_id)
     logging.info("get_sign full status respond {}".format(full_status_string))
     print("get_sign full status respond {}".format(full_status_string))
-    file_name = str(in_data)
     file_ending = "txt"
 
     with open('{}_signature.{}'.format(in_data, file_ending), 'w') as f:
@@ -231,7 +228,6 @@ def signing(api_endpoint, api_key, in_data, out_data, key_name, operation):
 
 
 def main(api_endpoint, api_key, in_data, out_data, key_name, operation, digest):
-
     if digest:
         signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation)
     else:

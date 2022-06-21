@@ -1,26 +1,31 @@
 {% extends 'base.html' %}
 
-{% block title %}{% endblock %}
+{% block title %}
+{% endblock %}
 
+<style>
+    .progress {
+    margin: 50px auto;
+    padding: 2px;
+    width: 100%;
+    max-width: 500px;
+    border: 3px solid #05e35e;
+    height: 30px;
+    }
+
+    .progress .progress__bar {
+  height: 100%;
+  width: 0%;
+  animation: fill-bar 3s infinite;
+}
+
+</style>
 {% block content %}
-		<h1>Success your signed file is ready</h1>
-        <br>
-		<p class="lead"></p>
-		    <div class="container">
-        <div class="row">
-            <a class="btn btn-success" href="{{url_for('download_signature')}}">
-                <span style="font-size:200%;">Download the signature</span></a>
-        </div>
-                <br>
-                <div class="row">
-            <a class="btn btn-success" href="{{url_for('download_log_file')}}">
-                <span style="font-size:200%;">Download the log file</span></a>
-        </div>
-                <br>
-                <div class="row">
-            <a class="btn btn-success" href="{{url_for('home_page')}}">
-                <span style="font-size:200%;">Sign another file</span></a>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <body onload="window.location.href='{{url_for( 'signing_progress')}}';">
+                        <h1>Waiting for quorum approval</h1>
+                        <div class="progress">
+                        <div class="progress__bar"></div>
+                        </div>
+        </body>
+
 {% endblock %}

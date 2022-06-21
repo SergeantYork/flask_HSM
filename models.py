@@ -13,3 +13,4 @@ class SigningField(FlaskForm):
                                                                    ('SHA2-256', 'SHA2-256 bit'),
                                                                    ('SHA2-384', 'SHA2-384 bit'),
                                                                    ('SHA2-512', 'SHA2-512 bit')])
+    submit = SubmitField(label='Submit')
