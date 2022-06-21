@@ -2,16 +2,12 @@ import json
 import logging
 import sys
 import requests
-import time
 import hashlib
-import base64
 import os
-from flask import render_template
-import termcolor
-from termcolor import colored
 
-# PATH = os.path.dirname(sys.executable) for .exe only
-PATH = os.path.dirname(os.path.realpath(__file__))
+
+# PATH = os.path.dirname(sys.executable) # for .exe only
+PATH = os.path.dirname(os.path.realpath(__file__)) # for development only
 
 logging.basicConfig(filename='static/flask_server.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %("
                                                                                    "message)s")
@@ -135,105 +131,3 @@ def hash_file(filename, operation):
     print("the digest value : {}".format(h.digest()))
     return h.digest()
 
-
-def signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation):
-    print("in_data: {}".format(in_data))
-    fh = open("{}".format(in_data), 'rb')
-    result_digest = bytearray(fh.read)
-    hash_value = base64.b64encode(result_digest).decode("utf-8")
-    logging.info("the hash value : {}".format(hash_value))
-    print("the hash value : {}".format(hash_value))
-    api_key = api_key
-    api_endpoint = api_endpoint
-    key = key_name
-
-    if operation == 'SHA-224':
-        alg = 'sha224'
-    if operation == 'SHA2-256':
-        alg = 'Sha256'
-    if operation == 'SHA2-384':
-        alg = 'Sha384'
-    if operation == 'SHA2-512':
-        alg = 'Sha512'
-    token = get_auth(api_endpoint, api_key)
-    request_id = gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg)
-    match = {'status': 'PENDING'}
-
-    while match['status'] == 'PENDING':
-        status = check_request_status(token, api_endpoint)
-        match = next(d for d in status if d['request_id'] == request_id)
-        time.sleep(0.25)
-    logging.info('request approved getting signature')
-    print('request approved getting signature')
-
-    full_status_string = get_sign(api_endpoint, token, request_id)
-    logging.info("get_sign full status respond {}".format(full_status_string))
-    print("get_sign full status respond {}".format(full_status_string))
-    file_ending = "txt"
-
-    with open('{}_signature.{}'.format(in_data, file_ending), 'w') as f:
-        f.write('Request response:')
-
-    append_new_line('{}_signature.{}'.format(in_data, file_ending), "{}".format(full_status_string))
-
-
-def signing(api_endpoint, api_key, in_data, out_data, key_name, operation):
-    result = hash_file(in_data, operation)
-    result_digest = bytearray(result)
-    print("SHA-Digest Generation")
-
-    logging.info("the digest value : {}".format(result_digest))
-    hash_value = base64.b64encode(result_digest).decode("utf-8")
-    logging.info("the hash value : {}".format(hash_value))
-    api_key = api_key
-    api_endpoint = api_endpoint
-    key = key_name
-
-    if operation == 'SHA2-224':
-        alg = 'sha224'
-    if operation == 'SHA2-256':
-        alg = 'Sha256'
-    if operation == 'SHA2-384':
-        alg = 'Sha384'
-    if operation == 'SHA2-512':
-        alg = 'Sha512'
-
-    token = get_auth(api_endpoint, api_key)
-
-    request_id = gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg)
-
-    print("my digest:{}".format(hash_value))
-
-    match = {'status': 'PENDING'}
-
-    while match['status'] == 'PENDING':
-        status = check_request_status(token, api_endpoint)
-        match = next(d for d in status if d['request_id'] == request_id)
-        time.sleep(0.25)
-    logging.info('Request approved getting signature')
-    print('Request approved getting signature')
-
-    signature_string = get_sign(api_endpoint, token, request_id)
-
-    file_ending = "txt"
-
-    with open('{}_signature.{}'.format(in_data, file_ending), 'w') as f:
-        f.write('Request response:')
-
-    print('{}_signature.{}'.format(in_data, file_ending))
-    append_new_line('{}_signature.{}'.format(in_data, file_ending),
-                    "{}".format(signature_string))
-    print("\n")
-    termcolor.cprint('The process finished your signature is ready please download from web page', 'green')
-
-
-def main(api_endpoint, api_key, in_data, out_data, key_name, operation, digest):
-    if digest:
-        signing_digest(api_endpoint, api_key, in_data, out_data, key_name, operation)
-    else:
-        signing(api_endpoint, api_key, in_data, out_data, key_name, operation)
-
-
-def call_streaming_signing(api_endpoint, api_key, in_data, out_data, key_name, operation, digest):
-    """call streaming method to pass the values from the GUI"""
-    main(api_endpoint, api_key, in_data, out_data, key_name, operation, digest)
