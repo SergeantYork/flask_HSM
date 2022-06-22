@@ -14,7 +14,7 @@ from werkzeug.utils import secure_filename
 from models import SigningField
 
 from my_HSM_Signing import (append_new_line, get_auth, gen_auth_request_for_sign
-                            , check_request_status, get_sign, hash_file)
+, check_request_status, get_sign, hash_file)
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'ec9439cfc6c796ae2029594d'
