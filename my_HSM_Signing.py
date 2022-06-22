@@ -44,7 +44,7 @@ def get_auth(api_endpoint, api_key):
     response_print = json.dumps(response_json)
 
     if response.status_code == 401:
-        logging.error("Wrong API key: {}".format(response_print))
+        print("Error  -  Wrong API key: {}".format(response_print))
 
     logging.info("get_auth: {}".format(response_print))
     return response_json["access_token"]
@@ -87,7 +87,7 @@ def check_request_status(token, api_endpoint):
     response = requests.request("GET", url, headers=headers, data=payload)
     response_json = response.json()
     response_print = json.dumps(response_json)
-    logging.info("check_request_status: {}".format(response_print))
+    print("Error - check_request_status: {}".format(response_print))
     return response_json
 
 
@@ -100,10 +100,10 @@ def get_sign(api_endpoint, token, request_id):
         'Authorization': 'Bearer {}'.format(token)
     }
     response = requests.request("POST", url, headers=headers, data=payload)
-    if response.status_code == 401:
-        logging.error("Signing error")
     response_json = response.json()
     response_print = json.dumps(response_json)
+    if response.status_code == 401:
+        print("Error - Signing Error")
     logging.info("get_sign: {}".format(response_print))
     return response_json
 

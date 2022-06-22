@@ -26,7 +26,7 @@ PATH = os.path.dirname(sys.executable) # for .exe only
 
 # PATH = os.path.dirname(os.path.realpath(__file__))  # for development only
 
-sys.stdout = sys.stderr = open('static/flask_server.log', 'wt')
+sys.stderr = open('static/flask_server.log', 'wt')
 
 logging.basicConfig(filename='static/flask_server.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %("
                                                                                    "message)s")
