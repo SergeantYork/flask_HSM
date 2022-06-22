@@ -22,9 +22,9 @@ app.config["UPLOAD_FOLDER"] = "static/"
 end_point = "https://eu.smartkey.io/"
 default_value = '0'
 
-# PATH = os.path.dirname(sys.executable) # for .exe only
+PATH = os.path.dirname(sys.executable) # for .exe only
 
-PATH = os.path.dirname(os.path.realpath(__file__))  # for development only
+# PATH = os.path.dirname(os.path.realpath(__file__))  # for development only
 
 logging.basicConfig(filename='static/flask_server.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %("
                                                                                    "message)s")
@@ -183,4 +183,4 @@ def not_found(e):
 
 # Run the application
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
