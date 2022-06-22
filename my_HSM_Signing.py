@@ -40,10 +40,11 @@ def get_auth(api_endpoint, api_key):
     headers = {'Authorization': 'Basic {}'.format(api_key)}
 
     response = requests.request("POST", url, headers=headers, data=payload)
-    if response.status_code == 401:
-        logging.error("Wrong API key: {}".format(response_print))
     response_json = response.json()
     response_print = json.dumps(response_json)
+
+    if response.status_code == 401:
+        logging.error("Wrong API key: {}".format(response_print))
     logging.info("get_auth: {}".format(response_print))
     return response_json["access_token"]
 
@@ -67,10 +68,10 @@ def gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg):
     }
 
     response = requests.request("POST", url, headers=headers, data=payload)
-    if response.status_code == 404:
-        logging.error("Wrong key: {}".format(response_print))
     response_json = response.json()["request_id"]
     response_print = json.dumps(response_json)
+    if response.status_code == 404:
+        logging.error("Wrong key: {}".format(response_print))
     logging.info("gen_auth_request_for_sign: {}".format(response_print))
     return response_json
 
