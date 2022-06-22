@@ -45,6 +45,7 @@ def get_auth(api_endpoint, api_key):
 
     if response.status_code == 401:
         logging.error("Wrong API key: {}".format(response_print))
+
     logging.info("get_auth: {}".format(response_print))
     return response_json["access_token"]
 

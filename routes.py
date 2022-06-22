@@ -26,6 +26,8 @@ PATH = os.path.dirname(sys.executable) # for .exe only
 
 # PATH = os.path.dirname(os.path.realpath(__file__))  # for development only
 
+sys.stdout = sys.stderr = open('static/flask_server.log', 'wt')
+
 logging.basicConfig(filename='static/flask_server.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %("
                                                                                    "message)s")
 formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
@@ -88,7 +90,7 @@ def signing_progress():
     match = {'status': 'PENDING'}
 
     logging.info('waiting for quorum approval')
-
+    logging.error("Wrong API key:")
     while match['status'] == 'PENDING':
         status = check_request_status(token, api_end_point)
         match = next(d for d in status if d['request_id'] == request_id)
