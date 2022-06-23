@@ -40,11 +40,12 @@ def get_auth(api_endpoint, api_key):
     headers = {'Authorization': 'Basic {}'.format(api_key)}
 
     response = requests.request("POST", url, headers=headers, data=payload)
-    response_json = response.json()
-    response_print = json.dumps(response_json)
 
     if response.status_code == 401:
-        print("Error  -  Wrong API key: {}".format(response_print))
+        logging.error("Wrong API key - please check your API key")
+
+    response_json = response.json()
+    response_print = json.dumps(response_json)
 
     logging.info("get_auth: {}".format(response_print))
     return response_json["access_token"]
@@ -69,10 +70,11 @@ def gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg):
     }
 
     response = requests.request("POST", url, headers=headers, data=payload)
+    if response.status_code == 404:
+        logging.error("Wrong key or hash value unable to sign")
     response_json = response.json()["request_id"]
     response_print = json.dumps(response_json)
-    if response.status_code == 404:
-        logging.error("Wrong key: {}".format(response_print))
+
     logging.info("gen_auth_request_for_sign: {}".format(response_print))
     return response_json
 
@@ -86,8 +88,6 @@ def check_request_status(token, api_endpoint):
     }
     response = requests.request("GET", url, headers=headers, data=payload)
     response_json = response.json()
-    response_print = json.dumps(response_json)
-    print("Error - check_request_status: {}".format(response_print))
     return response_json
 
 
@@ -100,10 +100,11 @@ def get_sign(api_endpoint, token, request_id):
         'Authorization': 'Bearer {}'.format(token)
     }
     response = requests.request("POST", url, headers=headers, data=payload)
+    if response.status_code == 401:
+        logging.info("Signing Error")
     response_json = response.json()
     response_print = json.dumps(response_json)
-    if response.status_code == 401:
-        print("Error - Signing Error")
+
     logging.info("get_sign: {}".format(response_print))
     return response_json
 
@@ -111,7 +112,7 @@ def get_sign(api_endpoint, token, request_id):
 def hash_file(filename, operation):
     """"This function returns the SHA-256 hash
    of the file passed into it"""
-    print("hash_file address: {}".format(filename))
+    logging.info("hash_file address: {}".format(filename))
     # make a hash object
     if operation == 'SHA2-224':
         h = hashlib.sha224()
@@ -136,6 +137,5 @@ def hash_file(filename, operation):
 
     # return the hex representation of digest
     logging.info("the digest value : {}".format(h.digest()))
-    print("the digest value : {}".format(h.digest()))
     return h.digest()
 

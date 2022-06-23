@@ -14,7 +14,7 @@ from werkzeug.utils import secure_filename
 from models import SigningField
 
 from my_HSM_Signing import (append_new_line, get_auth, gen_auth_request_for_sign
-, check_request_status, get_sign, hash_file)
+                            , check_request_status, get_sign, hash_file)
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'ec9439cfc6c796ae2029594d'
@@ -22,7 +22,7 @@ app.config["UPLOAD_FOLDER"] = "static/"
 end_point = "https://eu.smartkey.io/"
 default_value = '0'
 
-PATH = os.path.dirname(sys.executable) # for .exe only
+PATH = os.path.dirname(sys.executable)  # for .exe only
 
 # PATH = os.path.dirname(os.path.realpath(__file__))  # for development only
 
@@ -58,7 +58,7 @@ def signing_progress():
     if file_type == 'image':
         result = hash_file(path, signing_algorithm)
         result_digest = bytearray(result)
-        print("SHA-Digest Generation")
+        logging.info("SHA-Digest Generation")
 
     if file_type == 'Digest':
         fh = open("{}".format(path), 'rb')
@@ -85,19 +85,17 @@ def signing_progress():
     session['request_id'] = gen_auth_request_for_sign(token, api_end_point, key, hash_value, alg)
     request_id = session.get('request_id', None)
 
-    print("my digest:{}".format(hash_value))
+    logging.info("my digest:{}".format(hash_value))
 
     match = {'status': 'PENDING'}
 
     logging.info('waiting for quorum approval')
-    logging.error("Wrong API key:")
     while match['status'] == 'PENDING':
         status = check_request_status(token, api_end_point)
         match = next(d for d in status if d['request_id'] == request_id)
         time.sleep(0.25)
         session['status'] = match['status']
     logging.info('Request approved getting signature')
-    print('Request approved getting signature')
 
     signature_string = get_sign(api_end_point, token, request_id)
 
@@ -106,10 +104,9 @@ def signing_progress():
     with open('{}_signature.{}'.format(path, file_ending), 'w') as f:
         f.write('Request response:')
 
-    print('{}_signature.{}'.format(path, file_ending))
+    logging.info('{}_signature.{}'.format(path, file_ending))
     append_new_line('{}_signature.{}'.format(path, file_ending),
                     "{}".format(signature_string))
-    print("\n")
     termcolor.cprint('The process finished your signature is ready please download from web page', 'green')
 
     logging.info('Request approved')
@@ -169,6 +166,9 @@ def download_log_file():
     logger.info('new_name: {}'.format(new_name))
     shutil.copy(old_name, new_name)
     download_path = new_name
+    flask_server_file = open("{}".format(old_name), "w")
+    flask_server_file.truncate()
+    flask_server_file.close()
     logging.info('download_path: {}'.format(download_path))
     return send_file(download_path, as_attachment=True)
 
