@@ -5,7 +5,6 @@ import requests
 import hashlib
 import os
 
-
 PATH = os.path.dirname(sys.executable) # for .exe only
 # PATH = os.path.dirname(os.path.realpath(__file__)) # for development only
 
