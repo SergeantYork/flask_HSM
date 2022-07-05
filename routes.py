@@ -1,3 +1,5 @@
+# TODO: add to the app the option to do HMAC
+
 import os
 import shutil
 import time
@@ -11,10 +13,12 @@ from flask import (
     Flask, request, session, send_file)
 from werkzeug.utils import secure_filename
 
-from models import SigningField
+from models import SigningField, HmacField
 
 from my_HSM_Signing import (append_new_line, get_auth, gen_auth_request_for_sign
-                            , check_request_status, get_sign, hash_file)
+, check_request_status, get_sign, hash_file)
+
+from my_hmac_code import (gen_auth_request_for_hmac, get_hmac)
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'ec9439cfc6c796ae2029594d'
@@ -22,11 +26,11 @@ app.config["UPLOAD_FOLDER"] = "static/"
 end_point = "https://eu.smartkey.io/"
 default_value = '0'
 
-PATH = os.path.dirname(sys.executable)  # for .exe only
+# PATH = os.path.dirname(sys.executable)  # for .exe only
 
-# PATH = os.path.dirname(os.path.realpath(__file__))  # for development only
+PATH = os.path.dirname(os.path.realpath(__file__))  # for development only
 
-sys.stdout = sys.stderr = open('static/flask_server.log', 'wt')
+# sys.stdout = sys.stderr = open('static/flask_server.log', 'wt')
 
 logging.basicConfig(filename='static/flask_server.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %("
                                                                                    "message)s")
@@ -72,7 +76,7 @@ def signing_progress():
     key = signing_key
 
     if signing_algorithm == 'SHA2-224':
-        alg = 'sha224'
+        alg = 'Sha224'
     if signing_algorithm == 'SHA2-256':
         alg = 'Sha256'
     if signing_algorithm == 'SHA2-384':
@@ -115,6 +119,103 @@ def signing_progress():
     return render_template('signing-progress.html')
 
 
+@app.route('/hmac-progress')
+def hmac_progress():
+    api_key = session.get('api_key', None)
+    key = session.get('hmac_key', None)
+    serial_num = session.get('serial_num', None)
+    path = PATH + '/static/'
+    session['full_path'] = path
+    hmac_algorithm = session.get('signing_algorithm', None)
+
+    logging.info("file path: {}".format(path))
+
+    if hmac_algorithm == 'SHA2-224':
+        alg = 'Sha224'
+    if hmac_algorithm == 'SHA2-256':
+        alg = 'Sha256'
+    if hmac_algorithm == 'SHA2-384':
+        alg = 'Sha384'
+    if hmac_algorithm == 'SHA2-512':
+        alg = 'Sha512'
+
+    token = get_auth(api_key=api_key, api_endpoint=end_point)
+
+    print('api key: {}\n token: {}\n key name: {}\n algorithm: {}\n serial number: {}\n'.format(api_key, token, key,
+                                                                                                alg,
+                                                                                                serial_num))
+    logging.info('api key: {}\n token: {}\n key name: {}\n algorithm: {}\n serial number: {}\n'.format(api_key, token,
+                                                                                                       key, alg,
+                                                                                                       serial_num))
+    request_id = gen_auth_request_for_hmac(token=token, key=key, alg=alg, serial_num=serial_num)
+
+    match = {'status': 'PENDING'}
+
+    while match['status'] == 'PENDING':
+        status = check_request_status(token=token, api_endpoint=end_point)
+
+        match = next(d for d in status if d['request_id'] == request_id)
+
+        print('Quorum {}\n'.format(match['status']))
+
+        logging.info('Quorum {}\n'.format(match['status']))
+
+        time.sleep(0.25)
+    if match['status'] == 'APPROVED':
+        print('request approved getting the HMAC\n')
+
+        logging.info('request approved getting the HMAC\n')
+
+        hmac_response = get_hmac(token, request_id)
+        hmac_raw = hmac_response['body']['mac']
+        hmac_code = hmac_raw[:32].upper()
+
+        logging.info('Here is your HMAC raw: {}\n'.format(hmac_response['body']['mac']))
+        print('Here is your HMAC truncated : {}\n'.format(hmac_code))
+
+        file_ending = "txt"
+        hmac_file= '{}_hmac_code.{}'.format(serial_num, file_ending)
+
+        with open('{}{}_hmac_code.{}'.format(path, serial_num, file_ending), 'w') as f:
+            f.write('Request response:')
+
+        logging.info('file name: {}_hmac_code.{}'.format(serial_num, file_ending))
+        session['hmac_full_path'] = path + hmac_file
+        session['file_name'] = hmac_file
+        append_new_line('{}_hmac_code.{}'.format(serial_num, file_ending),
+                        "{}".format(hmac_raw))
+        append_new_line('{}_hmac_code.{}'.format(serial_num, file_ending),
+                        "{}".format(hmac_code))
+
+        termcolor.cprint('The process finished your password is ready please download from web page', 'green')
+
+        logging.info('Request approved')
+    if not match['status'] == 'PENDING':
+        return render_template('hmac-download-page.html')
+    return render_template('signing-progress.html')
+
+
+@app.route('/hmac-code', methods=['GET', 'POST'])
+def hmac_code():
+    form = HmacField()
+
+    if form.is_submitted():
+
+        session['api_key'] = form.api_key.data
+
+        session['hmac_key'] = form.key_name.data
+
+        session['serial_num'] = form.serial_num.data
+
+        session['path'] = app.config['UPLOAD_FOLDER']
+
+        session['signing_algorithm'] = form.signing_alg.data
+
+        return render_template('hmac-progress.html')
+
+    return render_template('hmac-code.html', form=form)
+
+
 @app.route('/signing-file', methods=['GET', 'POST'])
 def signing_file():
     form = SigningField()
@@ -155,12 +256,19 @@ def download_signature():
     return send_file(download_path, as_attachment=True)
 
 
+@app.route('/download-hmac')
+def download_hmac():
+    download_path = session.get('hmac_full_path', None)
+    logger.info('full path download with file name: {}'.format(download_path))
+    return send_file(download_path, as_attachment=True)
+
+
 @app.route('/download_log')
 def download_log_file():
     path = session.get('full_path', None)
     old_name = path + '/flask_server.log'
-    logger.info('new_name: {}'.format(old_name))
     file_name = session.get('file_name', None)
+    logger.info('new_name: {}'.format(old_name))
     time_stamp = time.time()
     new_name = path + '/{}_{}_log.txt'.format(file_name, time_stamp)
     logger.info('new_name: {}'.format(new_name))
@@ -185,4 +293,4 @@ def not_found(e):
 
 # Run the application
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)

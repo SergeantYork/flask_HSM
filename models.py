@@ -13,3 +13,13 @@ class SigningField(FlaskForm):
                                                                    ('SHA2-256', 'SHA2-256 bit'),
                                                                    ('SHA2-384', 'SHA2-384 bit'),
                                                                    ('SHA2-512', 'SHA2-512 bit')])
+
+
+class HmacField(FlaskForm):
+    api_key = TextAreaField(label="Enter API key")
+    key_name = StringField(label="Enter key name")
+    serial_num = StringField(label="Enter serial number")
+    signing_alg = SelectField('Select signing algorithm', choices=[('SHA2-224', 'SHA2-224 bit'),
+                                                                   ('SHA2-256', 'SHA2-256 bit'),
+                                                                   ('SHA2-384', 'SHA2-384 bit'),
+                                                                   ('SHA2-512', 'SHA2-512 bit')])
