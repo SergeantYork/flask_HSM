@@ -1,6 +1,1 @@
-2022-07-07 14:33:14,109 - INFO - download_path: C:\Users\wachterr\Documents\Flask_HSM/static//samplecsv.csv_1657193594.0981522_log.txt
-2022-07-07 14:33:14,109 - INFO - download_path: C:\Users\wachterr\Documents\Flask_HSM/static//samplecsv.csv_1657193594.0981522_log.txt
-2022-07-07 14:33:14,109 - INFO - download_path: C:\Users\wachterr\Documents\Flask_HSM/static//samplecsv.csv_1657193594.0981522_log.txt
-2022-07-07 14:33:14,110 - INFO - 127.0.0.1 - - [07/Jul/2022 14:33:14] "GET /download_log HTTP/1.1" 200 -
-2022-07-07 14:33:14,110 - INFO - 127.0.0.1 - - [07/Jul/2022 14:33:14] "GET /download_log HTTP/1.1" 200 -
-2022-07-07 14:33:14,110 - INFO - 127.0.0.1 - - [07/Jul/2022 14:33:14] "GET /download_log HTTP/1.1" 200 -
+
