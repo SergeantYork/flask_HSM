@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+    <style>
+        #Progress_Status {
+          width: 50%;
+          background-color: #ddd;
+        }
+        #myprogressBar {
+          width: 2%;
+          height: 20px;
+          background-color: #4CAF50;
+        }
+        </style>
+{% block title %}
+{% endblock %}
+
+{% block content %}
+        <body>
+            <form method="POST" class="form-signin" style="color:black" enctype = "multipart/form-data">
+                {{ form.hidden_tag() }}
+                        <h1>
+                           Create HMAC code from csv
+                        </h1>
+                                <br>
+                                {{ form.api_key.label() }}
+
+                                {{ form.api_key(class="form-control", placeholder="Enter API key")}}
+
+                                {{ form.key_name.label() }}
+
+                                {{ form.key_name(class="form-control", placeholder="Enter hmac key")}}
+
+                                {{ form.signing_alg.label() }}
+
+                                {{ form.signing_alg(class="form-control", size =1) }}
+                                <br>
+                                <p>Please choose .csv file</p>
+                                <br>
+                                <input type=file id="media" name=media>
+                                <br>
+                                <br>
+                                <div id="Progress_Status">
+                                        <div id="myprogressBar" style="font-size:2vw">....Uploading....</div>
+                                </div>
+
+                                <br>
+                                <input class="btn btn-lg btn-block btn-primary" onclick="update()" type="submit">
+                                <br>
+
+                        </form>
+          <script>
+                    function update() {
+                    var element = document.getElementById("myprogressBar");
+                    var width = 1;
+                    var identity = setInterval(scene, 100);
+                    function scene() {
+                    if (width >= 100) {
+                        clearInterval(identity);
+                    } else {
+                        width++;
+                        element.style.width = width + '%';
+                        }
+                    }
+                }
+        </script>
+
+        </body>
+{% endblock %}

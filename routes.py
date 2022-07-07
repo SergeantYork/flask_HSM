@@ -8,12 +8,15 @@ import logging
 import termcolor
 import base64
 
+from csv import DictReader
+from typing import List, Dict
+
 from flask import (
     render_template,
     Flask, request, session, send_file)
 from werkzeug.utils import secure_filename
 
-from models import SigningField, HmacField
+from models import (SigningField, HmacField, HmacCsvField)
 
 from my_HSM_Signing import (append_new_line, get_auth, gen_auth_request_for_sign
 , check_request_status, get_sign, hash_file)
@@ -121,77 +124,158 @@ def signing_progress():
 
 @app.route('/hmac-progress')
 def hmac_progress():
-    api_key = session.get('api_key', None)
-    key = session.get('hmac_key', None)
-    serial_num = session.get('serial_num', None)
-    path = PATH + '/static/'
-    session['full_path'] = path
-    hmac_algorithm = session.get('signing_algorithm', None)
+    csv = session.get('csv', None)
 
-    logging.info("file path: {}".format(path))
+    if not csv:
+        api_key = session.get('api_key', None)
+        key = session.get('hmac_key', None)
+        serial_num = session.get('serial_num', None)
+        path = PATH + '/static/'
+        session['full_path'] = path
+        hmac_algorithm = session.get('signing_algorithm', None)
 
-    if hmac_algorithm == 'SHA2-224':
-        alg = 'Sha224'
-    if hmac_algorithm == 'SHA2-256':
-        alg = 'Sha256'
-    if hmac_algorithm == 'SHA2-384':
-        alg = 'Sha384'
-    if hmac_algorithm == 'SHA2-512':
-        alg = 'Sha512'
+        logging.info("file path: {}".format(path))
 
-    token = get_auth(api_key=api_key, api_endpoint=end_point)
+        if hmac_algorithm == 'SHA2-224':
+            alg = 'Sha224'
+        if hmac_algorithm == 'SHA2-256':
+            alg = 'Sha256'
+        if hmac_algorithm == 'SHA2-384':
+            alg = 'Sha384'
+        if hmac_algorithm == 'SHA2-512':
+            alg = 'Sha512'
 
-    print('api key: {}\n token: {}\n key name: {}\n algorithm: {}\n serial number: {}\n'.format(api_key, token, key,
-                                                                                                alg,
-                                                                                                serial_num))
-    logging.info('api key: {}\n token: {}\n key name: {}\n algorithm: {}\n serial number: {}\n'.format(api_key, token,
-                                                                                                       key, alg,
-                                                                                                       serial_num))
-    request_id = gen_auth_request_for_hmac(token=token, key=key, alg=alg, serial_num=serial_num)
+        token = get_auth(api_key=api_key, api_endpoint=end_point)
 
-    match = {'status': 'PENDING'}
+        print('api key: {}\n token: {}\n key name: {}\n algorithm: {}\n serial number: {}\n'.format(api_key, token, key,
+                                                                                                    alg,
+                                                                                                    serial_num))
+        logging.info('api key: {}\n token: {}\n key name: {}\n algorithm: {}\n serial number: {}\n'.format(api_key,
+                                                                                                           token,
+                                                                                                           key, alg,
+                                                                                                           serial_num))
+        request_id = gen_auth_request_for_hmac(token=token, key=key, alg=alg, serial_num=serial_num)
 
-    while match['status'] == 'PENDING':
-        status = check_request_status(token=token, api_endpoint=end_point)
+        match = {'status': 'PENDING'}
 
-        match = next(d for d in status if d['request_id'] == request_id)
+        while match['status'] == 'PENDING':
+            status = check_request_status(token=token, api_endpoint=end_point)
 
-        print('Quorum {}\n'.format(match['status']))
+            match = next(d for d in status if d['request_id'] == request_id)
 
-        logging.info('Quorum {}\n'.format(match['status']))
+            print('Quorum {}\n'.format(match['status']))
 
-        time.sleep(0.25)
-    if match['status'] == 'APPROVED':
-        print('request approved getting the HMAC\n')
+            logging.info('Quorum {}\n'.format(match['status']))
 
-        logging.info('request approved getting the HMAC\n')
+            time.sleep(0.25)
 
-        hmac_response = get_hmac(token, request_id)
-        hmac_raw = hmac_response['body']['mac']
-        hmac_code = hmac_raw[:32].upper()
+        if match['status'] == 'APPROVED':
+            print('request approved getting the HMAC\n')
 
-        logging.info('Here is your HMAC raw: {}\n'.format(hmac_response['body']['mac']))
-        print('Here is your HMAC truncated : {}\n'.format(hmac_code))
+            logging.info('request approved getting the HMAC\n')
 
-        file_ending = "txt"
-        hmac_file= '{}_hmac_code.{}'.format(serial_num, file_ending)
+            hmac_response = get_hmac(token, request_id)
+            hmac_raw = hmac_response['body']['mac']
+            hmac_code = hmac_raw[:32].upper()
 
-        with open('{}{}_hmac_code.{}'.format(path, serial_num, file_ending), 'w') as f:
-            f.write('Request response:')
+            logging.info('Here is your HMAC raw: {}\n'.format(hmac_response['body']['mac']))
+            print('Here is your HMAC truncated : {}\n'.format(hmac_code))
 
-        logging.info('file name: {}_hmac_code.{}'.format(serial_num, file_ending))
-        session['hmac_full_path'] = path + hmac_file
-        session['file_name'] = hmac_file
-        append_new_line('{}_hmac_code.{}'.format(serial_num, file_ending),
-                        "{}".format(hmac_raw))
-        append_new_line('{}_hmac_code.{}'.format(serial_num, file_ending),
-                        "{}".format(hmac_code))
+            file_ending = "txt"
+            hmac_file = '{}_hmac_code.{}'.format(serial_num, file_ending)
 
-        termcolor.cprint('The process finished your password is ready please download from web page', 'green')
+            with open('{}{}_hmac_code.{}'.format(path, serial_num, file_ending), 'w') as f:
+                f.write('Request response:')
 
-        logging.info('Request approved')
+            logging.info('file name: {}_hmac_code.{}'.format(serial_num, file_ending))
+
+            session['hmac_full_path'] = path + hmac_file
+            session['file_name'] = hmac_file
+            append_new_line('{}_hmac_code.{}'.format(serial_num, file_ending),
+                            "{}".format(hmac_raw))
+            append_new_line('{}_hmac_code.{}'.format(serial_num, file_ending),
+                            "{}".format(hmac_code))
+
+            termcolor.cprint('The process finished your password is ready please download from web page', 'green')
+
+            logging.info('Request approved')
+
+        if not match['status'] == 'PENDING':
+            return render_template('hmac-download-page.html')
+
+        return render_template('signing-progress.html')
+
+    if csv:
+        api_key = session.get('api_key', None)
+        key = session.get('hmac_key', None)
+        file_name = session.get('file_name', None)
+        session['full_path'] = PATH + '/static/'
+        path = PATH + '/static/{}'.format(file_name)
+        hmac_algorithm = session.get('signing_algorithm', None)
+
+        logging.info("file path: {}".format(path))
+        if hmac_algorithm == 'SHA2-224':
+            alg = 'Sha224'
+        if hmac_algorithm == 'SHA2-256':
+            alg = 'Sha256'
+        if hmac_algorithm == 'SHA2-384':
+            alg = 'Sha384'
+        if hmac_algorithm == 'SHA2-512':
+            alg = 'Sha512'
+
+        token = get_auth(api_key=api_key, api_endpoint=end_point)
+
+        print('api key: {}\n token: {}\n key name: {}\n algorithm: {}\n '.format(api_key, token, key, alg))
+        logging.info('api key: {}\n token: {}\n key name: {}\n algorithm: {}\n'.format(api_key, token, key, alg))
+
+        filename_handler = open('{}'.format(path), 'r', encoding="utf8")
+        csv_reader = DictReader(filename_handler)
+        table: List[Dict[str, str]] = []
+        for row in csv_reader:
+            int_row: Dict[str, str] = {}
+            for column in row:
+                int_row[column] = str(row[column])
+            table.append(int_row)
+        filename_handler.close()
+
+        for row in table:
+
+            serial_num = row['serial num']
+
+            request_id = gen_auth_request_for_hmac(token=token, key=key, alg=alg, serial_num=serial_num)
+
+            match = {'status': 'PENDING'}
+
+            while match['status'] == 'PENDING':
+                status = check_request_status(token=token, api_endpoint=end_point)
+
+                match = next(d for d in status if d['request_id'] == request_id)
+
+                print('Quorum {}\n'.format(match['status']))
+
+                logging.info('Quorum {}\n'.format(match['status']))
+
+                time.sleep(0.25)
+
+            if match['status'] == 'APPROVED':
+                print('request approved getting the HMAC\n')
+
+                logging.info('request approved getting the HMAC\n')
+
+                hmac_response = get_hmac(token, request_id)
+
+                hmac_raw = hmac_response['body']['mac']
+
+                hmac_code = hmac_raw[:32].upper()
+
+                row['hmac_pass'] = hmac_code
+
+        print('the new table: {}'.format(table))
+        session['hmac_table'] = table
+
     if not match['status'] == 'PENDING':
         return render_template('hmac-download-page.html')
+
     return render_template('signing-progress.html')
 
 
@@ -200,6 +284,7 @@ def hmac_code():
     form = HmacField()
 
     if form.is_submitted():
+        session['csv'] = False
 
         session['api_key'] = form.api_key.data
 
@@ -214,6 +299,11 @@ def hmac_code():
         return render_template('hmac-progress.html')
 
     return render_template('hmac-code.html', form=form)
+
+
+@app.route('/hmac-choose', methods=['GET', 'POST'])
+def hmac_choose():
+    return render_template('hmac-choose.html')
 
 
 @app.route('/signing-file', methods=['GET', 'POST'])
@@ -244,6 +334,34 @@ def signing_file():
     return render_template('signing-file.html', form=form)
 
 
+@app.route('/hmac-csv', methods=['GET', 'POST'])
+def hmac_code_csv():
+    form = HmacCsvField()
+
+    if form.is_submitted():
+        f = request.files['media']
+
+        file_name = secure_filename(f.filename)
+
+        f.save(app.config['UPLOAD_FOLDER'] + file_name)
+
+        session['csv'] = True
+
+        session['file_name'] = file_name
+
+        session['api_key'] = form.api_key.data
+
+        session['hmac_key'] = form.key_name.data
+
+        session['path'] = app.config['UPLOAD_FOLDER']
+
+        session['signing_algorithm'] = form.signing_alg.data
+
+        return render_template('hmac-progress.html')
+
+    return render_template('hmac-csv.html', form=form)
+
+
 @app.route('/download')
 def download_signature():
     file_name = session.get('file_name', None)
@@ -258,9 +376,25 @@ def download_signature():
 
 @app.route('/download-hmac')
 def download_hmac():
-    download_path = session.get('hmac_full_path', None)
-    logger.info('full path download with file name: {}'.format(download_path))
-    return send_file(download_path, as_attachment=True)
+    csv = session.get('csv', None)
+    if not csv:
+        download_path = session.get('hmac_full_path', None)
+        logger.info('full path download with file name: {}'.format(download_path))
+
+    if csv:
+        file_name = session.get('file_name', None)
+        hmac_table = session.get('hmac_table', None)
+        new_file_name = '{}_new.csv'.format(file_name)
+        path = session.get('full_path', None)
+        download_path = path + '{}'.format(new_file_name)
+        print('new csv file download path: {}'.format(download_path))
+
+        with open('{}'.format(download_path), 'w') as f:
+            for row in hmac_table:
+                for key in row.keys():
+                    f.write("%s, %s\n" % (key, row[key]))
+
+        return send_file(download_path, as_attachment=True)
 
 
 @app.route('/download_log')
