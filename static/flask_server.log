@@ -1,1 +1,198 @@
+2022-07-11 16:03:05,551 - INFO - download_path: C:\Users\wachterr\Documents\flask_HSM/static//samplecsv.csv_1657544585.5399382_log.txt
+2022-07-11 16:03:05,551 - INFO - download_path: C:\Users\wachterr\Documents\flask_HSM/static//samplecsv.csv_1657544585.5399382_log.txt
+2022-07-11 16:03:05,551 - INFO - download_path: C:\Users\wachterr\Documents\flask_HSM/static//samplecsv.csv_1657544585.5399382_log.txt
+2022-07-11 16:03:05,553 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:05] "GET /download_log HTTP/1.1" 200 -
+2022-07-11 16:03:05,553 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:05] "GET /download_log HTTP/1.1" 200 -
+2022-07-11 16:03:05,553 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:05] "GET /download_log HTTP/1.1" 200 -
+2022-07-11 16:03:06,676 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:06] "GET / HTTP/1.1" 200 -
+2022-07-11 16:03:06,676 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:06] "GET / HTTP/1.1" 200 -
+2022-07-11 16:03:06,676 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:06] "GET / HTTP/1.1" 200 -
+2022-07-11 16:03:06,695 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:03:06,695 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:03:06,695 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:06] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:03:06,746 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:06] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:03:06,746 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:06] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:03:06,746 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:06] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:03:06,755 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:06] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:03:06,755 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:06] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:03:06,755 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:06] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:03:08,560 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:08] "GET /hmac-choose HTTP/1.1" 200 -
+2022-07-11 16:03:08,560 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:08] "GET /hmac-choose HTTP/1.1" 200 -
+2022-07-11 16:03:08,560 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:08] "GET /hmac-choose HTTP/1.1" 200 -
+2022-07-11 16:03:08,573 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:03:08,573 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:03:08,573 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:08] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:03:08,587 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:08] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:03:08,587 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:08] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:03:08,587 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:08] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:03:08,595 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:08] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:03:08,595 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:08] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:03:08,595 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:08] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:03:10,443 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:10] "GET /hmac-csv HTTP/1.1" 200 -
+2022-07-11 16:03:10,443 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:10] "GET /hmac-csv HTTP/1.1" 200 -
+2022-07-11 16:03:10,443 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:10] "GET /hmac-csv HTTP/1.1" 200 -
+2022-07-11 16:03:10,453 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:03:10,453 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:03:10,453 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:03:10,483 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:10] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:03:10,483 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:10] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:03:10,483 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:10] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:03:10,497 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:10] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:03:10,497 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:10] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:03:10,497 - INFO - 127.0.0.1 - - [11/Jul/2022 16:03:10] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:05:01,319 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:01] "POST /hmac-csv HTTP/1.1" 200 -
+2022-07-11 16:05:01,319 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:01] "POST /hmac-csv HTTP/1.1" 200 -
+2022-07-11 16:05:01,319 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:01] "POST /hmac-csv HTTP/1.1" 200 -
+2022-07-11 16:05:01,338 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:01] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:05:01,338 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:01] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:05:01,338 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:01] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:05:01,386 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:01] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:05:01,386 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:01] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:05:01,386 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:01] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:05:01,393 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:01] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:05:01,393 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:01] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:05:01,393 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:01] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:05:01,494 - INFO - file path: C:\Users\wachterr\Documents\flask_HSM/static/samplecsv.csv
+2022-07-11 16:05:01,494 - INFO - file path: C:\Users\wachterr\Documents\flask_HSM/static/samplecsv.csv
+2022-07-11 16:05:01,494 - INFO - file path: C:\Users\wachterr\Documents\flask_HSM/static/samplecsv.csv
+2022-07-11 16:05:02,059 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "437kjzmnTV_moakzArzG_lZjq2_jgHGfVZSGIghIExQmMNYZhXgPSKuvVqhbaypKNrgsYXOKXYIsz6xqQ4c9-w", "entity_id": "213bd361-e94a-41fd-b565-949f1e388a36"}
+2022-07-11 16:05:02,059 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "437kjzmnTV_moakzArzG_lZjq2_jgHGfVZSGIghIExQmMNYZhXgPSKuvVqhbaypKNrgsYXOKXYIsz6xqQ4c9-w", "entity_id": "213bd361-e94a-41fd-b565-949f1e388a36"}
+2022-07-11 16:05:02,059 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "437kjzmnTV_moakzArzG_lZjq2_jgHGfVZSGIghIExQmMNYZhXgPSKuvVqhbaypKNrgsYXOKXYIsz6xqQ4c9-w", "entity_id": "213bd361-e94a-41fd-b565-949f1e388a36"}
+2022-07-11 16:05:02,060 - INFO - api key: MjEzYmQzNjEtZTk0YS00MWZkLWI1NjUtOTQ5ZjFlMzg4YTM2OlFpUUtlV2RDX0Zqa2VXS1hkMG9rQzZZOHVwUGNXc0t4TUhzUHBRLV91enJrNUR0Ty16dHlXMERER3hrNWIxS0daa0FnUEJBbktGQ3FkaTFsUjJKRUN3
+ token: 437kjzmnTV_moakzArzG_lZjq2_jgHGfVZSGIghIExQmMNYZhXgPSKuvVqhbaypKNrgsYXOKXYIsz6xqQ4c9-w
+ key name: hmac_test
+ algorithm: Sha224
 
+2022-07-11 16:05:02,060 - INFO - api key: MjEzYmQzNjEtZTk0YS00MWZkLWI1NjUtOTQ5ZjFlMzg4YTM2OlFpUUtlV2RDX0Zqa2VXS1hkMG9rQzZZOHVwUGNXc0t4TUhzUHBRLV91enJrNUR0Ty16dHlXMERER3hrNWIxS0daa0FnUEJBbktGQ3FkaTFsUjJKRUN3
+ token: 437kjzmnTV_moakzArzG_lZjq2_jgHGfVZSGIghIExQmMNYZhXgPSKuvVqhbaypKNrgsYXOKXYIsz6xqQ4c9-w
+ key name: hmac_test
+ algorithm: Sha224
+
+2022-07-11 16:05:02,060 - INFO - api key: MjEzYmQzNjEtZTk0YS00MWZkLWI1NjUtOTQ5ZjFlMzg4YTM2OlFpUUtlV2RDX0Zqa2VXS1hkMG9rQzZZOHVwUGNXc0t4TUhzUHBRLV91enJrNUR0Ty16dHlXMERER3hrNWIxS0daa0FnUEJBbktGQ3FkaTFsUjJKRUN3
+ token: 437kjzmnTV_moakzArzG_lZjq2_jgHGfVZSGIghIExQmMNYZhXgPSKuvVqhbaypKNrgsYXOKXYIsz6xqQ4c9-w
+ key name: hmac_test
+ algorithm: Sha224
+
+2022-07-11 16:05:03,295 - INFO - Quorum PENDING
+
+2022-07-11 16:05:03,295 - INFO - Quorum PENDING
+
+2022-07-11 16:05:03,295 - INFO - Quorum PENDING
+
+2022-07-11 16:05:04,081 - INFO - Quorum PENDING
+
+2022-07-11 16:05:04,081 - INFO - Quorum PENDING
+
+2022-07-11 16:05:04,081 - INFO - Quorum PENDING
+
+2022-07-11 16:05:04,890 - INFO - Quorum PENDING
+
+2022-07-11 16:05:04,890 - INFO - Quorum PENDING
+
+2022-07-11 16:05:04,890 - INFO - Quorum PENDING
+
+2022-07-11 16:05:05,781 - INFO - Quorum PENDING
+
+2022-07-11 16:05:05,781 - INFO - Quorum PENDING
+
+2022-07-11 16:05:05,781 - INFO - Quorum PENDING
+
+2022-07-11 16:05:06,559 - INFO - Quorum PENDING
+
+2022-07-11 16:05:06,559 - INFO - Quorum PENDING
+
+2022-07-11 16:05:06,559 - INFO - Quorum PENDING
+
+2022-07-11 16:05:07,476 - INFO - Quorum PENDING
+
+2022-07-11 16:05:07,476 - INFO - Quorum PENDING
+
+2022-07-11 16:05:07,476 - INFO - Quorum PENDING
+
+2022-07-11 16:05:08,323 - INFO - Quorum APPROVED
+
+2022-07-11 16:05:08,323 - INFO - Quorum APPROVED
+
+2022-07-11 16:05:08,323 - INFO - Quorum APPROVED
+
+2022-07-11 16:05:08,580 - INFO - request approved getting the HMAC
+
+2022-07-11 16:05:08,580 - INFO - request approved getting the HMAC
+
+2022-07-11 16:05:08,580 - INFO - request approved getting the HMAC
+
+2022-07-11 16:05:10,344 - INFO - Quorum PENDING
+
+2022-07-11 16:05:10,344 - INFO - Quorum PENDING
+
+2022-07-11 16:05:10,344 - INFO - Quorum PENDING
+
+2022-07-11 16:05:11,187 - INFO - Quorum PENDING
+
+2022-07-11 16:05:11,187 - INFO - Quorum PENDING
+
+2022-07-11 16:05:11,187 - INFO - Quorum PENDING
+
+2022-07-11 16:05:11,968 - INFO - Quorum PENDING
+
+2022-07-11 16:05:11,968 - INFO - Quorum PENDING
+
+2022-07-11 16:05:11,968 - INFO - Quorum PENDING
+
+2022-07-11 16:05:12,809 - INFO - Quorum PENDING
+
+2022-07-11 16:05:12,809 - INFO - Quorum PENDING
+
+2022-07-11 16:05:12,809 - INFO - Quorum PENDING
+
+2022-07-11 16:05:13,678 - INFO - Quorum PENDING
+
+2022-07-11 16:05:13,678 - INFO - Quorum PENDING
+
+2022-07-11 16:05:13,678 - INFO - Quorum PENDING
+
+2022-07-11 16:05:14,491 - INFO - Quorum PENDING
+
+2022-07-11 16:05:14,491 - INFO - Quorum PENDING
+
+2022-07-11 16:05:14,491 - INFO - Quorum PENDING
+
+2022-07-11 16:05:15,283 - INFO - Quorum PENDING
+
+2022-07-11 16:05:15,283 - INFO - Quorum PENDING
+
+2022-07-11 16:05:15,283 - INFO - Quorum PENDING
+
+2022-07-11 16:05:16,087 - INFO - Quorum PENDING
+
+2022-07-11 16:05:16,087 - INFO - Quorum PENDING
+
+2022-07-11 16:05:16,087 - INFO - Quorum PENDING
+
+2022-07-11 16:05:16,860 - INFO - Quorum APPROVED
+
+2022-07-11 16:05:16,860 - INFO - Quorum APPROVED
+
+2022-07-11 16:05:16,860 - INFO - Quorum APPROVED
+
+2022-07-11 16:05:17,115 - INFO - request approved getting the HMAC
+
+2022-07-11 16:05:17,115 - INFO - request approved getting the HMAC
+
+2022-07-11 16:05:17,115 - INFO - request approved getting the HMAC
+
+2022-07-11 16:05:17,722 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:17] "GET /hmac-progress HTTP/1.1" 200 -
+2022-07-11 16:05:17,722 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:17] "GET /hmac-progress HTTP/1.1" 200 -
+2022-07-11 16:05:17,722 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:17] "GET /hmac-progress HTTP/1.1" 200 -
+2022-07-11 16:05:17,741 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:05:17,741 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:05:17,741 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-07-11 16:05:17,797 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:17] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:05:17,797 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:17] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:05:17,797 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:17] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-07-11 16:05:17,928 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:17] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:05:17,928 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:17] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:05:17,928 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:17] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-07-11 16:05:22,080 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:22] "GET /download-hmac HTTP/1.1" 200 -
+2022-07-11 16:05:22,080 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:22] "GET /download-hmac HTTP/1.1" 200 -
+2022-07-11 16:05:22,080 - INFO - 127.0.0.1 - - [11/Jul/2022 16:05:22] "GET /download-hmac HTTP/1.1" 200 -

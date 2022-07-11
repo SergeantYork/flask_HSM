@@ -1,4 +1,3 @@
-# TODO: add to the app the option to do HMAC
 
 import os
 import shutil
@@ -185,16 +184,12 @@ def hmac_progress():
             hmac_file = '{}_hmac_code.{}'.format(serial_num, file_ending)
 
             with open('{}{}_hmac_code.{}'.format(path, serial_num, file_ending), 'w') as f:
-                f.write('Request response:')
+                f.write('Request response:\n hmac raw: {}\n hmac code: {}\n'.format(hmac_raw, hmac_code))
 
             logging.info('file name: {}_hmac_code.{}'.format(serial_num, file_ending))
 
             session['hmac_full_path'] = path + hmac_file
             session['file_name'] = hmac_file
-            append_new_line('{}_hmac_code.{}'.format(serial_num, file_ending),
-                            "{}".format(hmac_raw))
-            append_new_line('{}_hmac_code.{}'.format(serial_num, file_ending),
-                            "{}".format(hmac_code))
 
             termcolor.cprint('The process finished your password is ready please download from web page', 'green')
 
@@ -380,6 +375,7 @@ def download_hmac():
     if not csv:
         download_path = session.get('hmac_full_path', None)
         logger.info('full path download with file name: {}'.format(download_path))
+        return send_file(download_path, as_attachment=True)
 
     if csv:
         file_name = session.get('file_name', None)
