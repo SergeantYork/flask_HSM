@@ -15,7 +15,7 @@ from flask import (
     Flask, request, session, send_file)
 from werkzeug.utils import secure_filename
 
-from models import (SigningField, HmacField, HmacCsvField)
+from models import (SigningField, HmacField, HmacCsvField, Login)
 
 from my_HSM_Signing import (append_new_line, get_auth, gen_auth_request_for_sign
 , check_request_status, get_sign, hash_file)
@@ -44,7 +44,21 @@ logger.setLevel(logging.INFO)
 logger.addHandler(handler)
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
+def login():
+    form = Login()
+    if form.is_submitted():
+        session['user_name'] = form.user_name.data
+        session['password'] = form.password.data
+        user_name = session.get('user_name', None)
+        password = session.get('password', None)
+        logging.info("user name: {}".format(user_name))
+        logging.info("password: {}".format(password))
+        return render_template('index.html')
+    return render_template('login.html', form=form)
+
+
+@app.route('/signing')
 def home_page():
     return render_template('index.html')
 

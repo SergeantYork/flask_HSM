@@ -1,3 +1,4 @@
+import base64
 import json
 import logging
 import sys
@@ -126,7 +127,7 @@ def hash_file(filename, operation):
         h = hashlib.sha512()
 
     # open file for reading in binary mode
-    with open(filename, 'rb') as file:
+    with open(filename, 'r') as file:
         # loop till the end of the file
         chunk = 0
         while chunk != b'':

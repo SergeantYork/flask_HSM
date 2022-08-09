@@ -32,3 +32,8 @@ class HmacCsvField(FlaskForm):
                                                                    ('SHA2-256', 'SHA2-256 bit'),
                                                                    ('SHA2-384', 'SHA2-384 bit'),
                                                                    ('SHA2-512', 'SHA2-512 bit')])
+
+
+class Login(FlaskForm):
+    user_name = TextAreaField(label="Enter user name")
+    password = StringField(label="Enter password")
