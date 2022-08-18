@@ -1,4 +1,3 @@
-
 import os
 import shutil
 import time
@@ -15,10 +14,11 @@ from flask import (
     Flask, request, session, send_file)
 from werkzeug.utils import secure_filename
 
-from models import (SigningField, HmacField, HmacCsvField, Login)
+from models import (SigningField, HmacField, HmacCsvField, Login, Verify)
 
-from my_HSM_Signing import (append_new_line, get_auth, gen_auth_request_for_sign
-, check_request_status, get_sign, hash_file)
+from my_HSM_Signing import (append_new_line, get_auth, gen_auth_request_for_sign,
+                            check_request_status, get_sign, hash_file, pss_verification, rsa_verification,
+                            gen_auth_request_for_sign_pss)
 
 from my_hmac_code import (gen_auth_request_for_hmac, get_hmac)
 
@@ -63,6 +63,103 @@ def home_page():
     return render_template('index.html')
 
 
+def sign_rsa(api_end_point, api_key, key, hash_value, alg, path):
+    logging.info("sign_rsa api_end_point: {}".format(api_end_point))
+    logging.info("sign_rsa api_key: {}".format(api_key))
+    logging.info("sign_rsa key: {}".format(key))
+    logging.info("sign_rsa hash_value: {}".format(hash_value))
+    logging.info("sign_rsa alg: {}".format(alg))
+    logging.info("sign_rsa path: {}".format(path))
+
+    session['token'] = get_auth(api_end_point, api_key)
+    token = session.get('token', None)
+
+    logging.info("sign_rsa token: {}".format(token))
+
+    session['request_id'] = gen_auth_request_for_sign(token, api_end_point, key, hash_value, alg)
+    request_id = session.get('request_id', None)
+
+    logging.info("sign_rsa request_id: {}".format(request_id))
+
+    logging.info("my digest:{}".format(hash_value))
+
+    match = {'status': 'PENDING'}
+
+    logging.info('waiting for quorum approval')
+
+    while match['status'] == 'PENDING':
+        status = check_request_status(token, api_end_point)
+        match = next(d for d in status if d['request_id'] == request_id)
+        time.sleep(0.25)
+        session['status'] = match['status']
+
+    logging.info('Request approved getting signature')
+    signature_string = get_sign(api_end_point, token, request_id)
+
+    file_ending = "txt"
+
+    with open('{}_signature.{}'.format(path, file_ending), 'w') as f:
+        f.write('Request response:')
+
+    logging.info('{}_signature.{}'.format(path, file_ending))
+    append_new_line('{}_signature.{}'.format(path, file_ending),
+                    "signature type RSA \n{}\n hash_value: {}".format(signature_string, hash_value))
+    termcolor.cprint('The process finished your signature is ready please download from web page', 'green')
+
+    logging.info('Request approved')
+
+    if not match['status'] == 'PENDING':
+        return 1
+
+
+def sign_rsa_pss(api_end_point, api_key, key, hash_value, alg, path):
+    logging.info("sign_rsa api_end_point: {}".format(api_end_point))
+    logging.info("sign_rsa api_key: {}".format(api_key))
+    logging.info("sign_rsa key: {}".format(key))
+    logging.info("sign_rsa hash_value: {}".format(hash_value))
+    logging.info("sign_rsa alg: {}".format(alg))
+    logging.info("sign_rsa path: {}".format(path))
+
+    session['token'] = get_auth(api_end_point, api_key)
+    token = session.get('token', None)
+
+    logging.info("sign_rsa token: {}".format(token))
+
+    session['request_id'] = gen_auth_request_for_sign_pss(token, api_end_point, key, hash_value, alg)
+    request_id = session.get('request_id', None)
+
+    logging.info("sign_rsa request_id: {}".format(request_id))
+
+    logging.info("my digest:{}".format(hash_value))
+
+    match = {'status': 'PENDING'}
+
+    logging.info('waiting for quorum approval')
+    while match['status'] == 'PENDING':
+        status = check_request_status(token, api_end_point)
+        match = next(d for d in status if d['request_id'] == request_id)
+        time.sleep(0.25)
+        session['status'] = match['status']
+
+    logging.info('Request approved getting signature')
+    signature_string = get_sign(api_end_point, token, request_id)
+
+    file_ending = "txt"
+
+    with open('{}_signature.{}'.format(path, file_ending), 'w') as f:
+        f.write('Request response:')
+
+    logging.info('{}_signature.{}'.format(path, file_ending))
+    append_new_line('{}_signature.{}'.format(path, file_ending),
+                    "signature type RSA_PSS \n {}\n hash_value: {}".format(signature_string, hash_value))
+    termcolor.cprint('The process finished your signature is ready please download from web page', 'green')
+
+    logging.info('Request approved')
+
+    if not match['status'] == 'PENDING':
+        return 1
+
+
 @app.route('/signing-progress')
 def signing_progress():
     api_key = session.get('api_key', None)
@@ -72,7 +169,8 @@ def signing_progress():
     session['full_path'] = PATH + '/static/'
     signing_algorithm = session.get('signing_algorithm', None)
     file_type = session.get('file_type', None)
-
+    signing_type = session.get('signing_type', None)
+    file_signed = -1
     logging.info("file path: {}".format(path))
 
     if file_type == 'image':
@@ -100,37 +198,13 @@ def signing_progress():
     if signing_algorithm == 'SHA2-512':
         alg = 'Sha512'
 
-    session['token'] = get_auth(api_end_point, api_key)
-    token = session.get('token', None)
-    session['request_id'] = gen_auth_request_for_sign(token, api_end_point, key, hash_value, alg)
-    request_id = session.get('request_id', None)
+    if signing_type == 'RSA':
+        file_signed = sign_rsa(api_end_point, api_key, key, hash_value, alg, path)
 
-    logging.info("my digest:{}".format(hash_value))
+    if signing_type == 'RSA-PSS':
+        file_signed = sign_rsa_pss(api_end_point, api_key, key, hash_value, alg, path)
 
-    match = {'status': 'PENDING'}
-
-    logging.info('waiting for quorum approval')
-    while match['status'] == 'PENDING':
-        status = check_request_status(token, api_end_point)
-        match = next(d for d in status if d['request_id'] == request_id)
-        time.sleep(0.25)
-        session['status'] = match['status']
-    logging.info('Request approved getting signature')
-
-    signature_string = get_sign(api_end_point, token, request_id)
-
-    file_ending = "txt"
-
-    with open('{}_signature.{}'.format(path, file_ending), 'w') as f:
-        f.write('Request response:')
-
-    logging.info('{}_signature.{}'.format(path, file_ending))
-    append_new_line('{}_signature.{}'.format(path, file_ending),
-                    "{}".format(signature_string))
-    termcolor.cprint('The process finished your signature is ready please download from web page', 'green')
-
-    logging.info('Request approved')
-    if not match['status'] == 'PENDING':
+    if file_signed == 1:
         return render_template('download-page.html')
     return render_template('signing-progress.html')
 
@@ -338,9 +412,77 @@ def signing_file():
 
         session['file_type'] = form.file_type.data
 
+        session['signing_type'] = form.signing_type.data
+
         return render_template('signing-progress.html')
 
     return render_template('signing-file.html', form=form)
+
+
+@app.route('/verify-sign', methods=['GET', 'POST'])
+def verify_sign():
+    form = Verify()
+
+    if form.is_submitted():
+        session['api_key'] = form.api_key.data
+
+        session['signing_key'] = form.key_name.data
+
+        session['digest'] = form.digest.data
+
+        session['signature'] = form.signature.data
+
+        session['signing_algorithm'] = form.signing_alg.data
+
+        session['signing_type'] = form.signing_type.data
+
+        return render_template('verify-progress.html')
+
+    return render_template('verify-sign.html', form=form)
+
+
+@app.route('/verify-progress')
+def verify_progress():
+    api_key = session.get('api_key', None)
+    signing_key = session.get('signing_key', None)
+    user_signature = session.get('user_signature', None)
+    user_digest = session.get('signing_algorithm', None)
+    signing_algorithm = session.get('signing_algorithm', None)
+    signing_type = session.get('signing_type', None)
+    logging.info("the digest value : {}".format(user_digest))
+
+    api_end_point = end_point
+    key = signing_key
+
+    if signing_algorithm == 'SHA2-224':
+        alg = 'Sha224'
+    if signing_algorithm == 'SHA2-256':
+        alg = 'Sha256'
+    if signing_algorithm == 'SHA2-384':
+        alg = 'Sha384'
+    if signing_algorithm == 'SHA2-512':
+        alg = 'Sha512'
+
+    session['token'] = get_auth(api_end_point, api_key)
+    token = session.get('token', None)
+
+    if signing_type == 'RSA-PSS':
+        session['verification result'] = pss_verification(token=token, api_endpoint=api_end_point, key=key,
+                                                          hash_value=user_digest,
+                                                          alg=alg, user_signature=user_signature)
+    if signing_type == 'RSA':
+        session['verification result'] = rsa_verification(token=token, api_endpoint=api_end_point, key=key,
+                                                          hash_value=user_digest,
+                                                          alg=alg, user_signature=user_signature)
+
+    verification_result = session.get('verification result', None)
+
+    if verification_result:
+        logging.info("verification was successful")
+        return render_template('verification-result.html')
+    if not verification_result:
+        logging.info("verification was not successful")
+        return render_template('error_page.html')
 
 
 @app.route('/hmac-csv', methods=['GET', 'POST'])

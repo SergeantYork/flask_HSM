@@ -7,7 +7,7 @@ import hashlib
 import os
 
 # PATH = os.path.dirname(sys.executable) # for .exe only
-PATH = os.path.dirname(os.path.realpath(__file__)) # for development only
+PATH = os.path.dirname(os.path.realpath(__file__))  # for development only
 
 logging.basicConfig(filename='static/flask_server.log', level=logging.INFO, format="%(asctime)s - %(levelname)s - %("
                                                                                    "message)s")
@@ -61,7 +61,7 @@ def gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg):
                 "name": "{}".format(key)
             },
             "hash_alg": "{}".format(alg),
-            "data": "{}".format(hash_value)
+            "hash": "{}".format(hash_value)
         }
     })
     headers = {
@@ -76,6 +76,42 @@ def gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg):
     response_print = json.dumps(response_json)
 
     logging.info("gen_auth_request_for_sign: {}".format(response_print))
+    return response_json
+
+
+def gen_auth_request_for_sign_pss(token, api_endpoint, key, hash_value, alg):
+    url = "{}/sys/v1/approval_requests".format(api_endpoint)
+    payload = json.dumps({
+        "method": "POST",
+        "operation": "/crypto/v1/sign",
+        "body": {
+            "key": {
+                "name": "{}".format(key)
+            },
+            "hash_alg": "{}".format(alg),
+            "hash": "{}".format(hash_value),
+            "mode": {
+                "PSS": {
+                    "mgf": {
+                        "mgf1": {
+                            "hash": "{}".format(alg)
+                        }
+                    }
+                }
+            }
+        }
+    })
+    headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer {}'.format(token)
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload)
+    if response.status_code == 404:
+        logging.error("Wrong key or hash value unable to sign")
+    response_json = response.json()["request_id"]
+    response_print = json.dumps(response_json)
+    logging.info("gen_auth_request_for_sign_pss: {}".format(response_print))
     return response_json
 
 
@@ -109,33 +145,88 @@ def get_sign(api_endpoint, token, request_id):
     return response_json
 
 
+def rsa_verification(api_endpoint, token, key, alg, hash_value, user_signature):
+    url = "{}/crypto/v1/verify".format(api_endpoint)
+    payload = json.dumps({
+        "key": {
+            "name": "{}".format(key)
+        },
+        "hash_alg": "{}".format(alg),
+        "hash": "{}".format(hash_value),
+        "signature": "{}".format(user_signature)
+    })
+
+    headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer {}'.format(token)
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload)
+    if response.status_code == 404:
+        logging.error("Wrong key or hash value unable to sign")
+    response_json = response.json()
+    response_print = json.dumps(response_json)
+    logging.info("RSA verification: {}".format(response_print))
+    return response_json['result']
+
+
+def pss_verification(api_endpoint, token, key, alg, hash_value, user_signature):
+
+    url = "{}/crypto/v1/verify".format(api_endpoint)
+    payload = json.dumps({
+        "key": {
+            "name": "{}".format(key)
+        },
+        "hash_alg": "{}".format(alg),
+        "hash": "{}".format(hash_value),
+        "signature": "{}".format(user_signature),
+        "mode": {
+            "PSS": {
+                "mgf": {
+                    "mgf1": {
+                        "hash": "{}".format(alg)
+                    }
+                }
+            }
+        }
+    })
+    headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer {}'.format(token)
+    }
+
+    response = requests.request("POST", url, headers=headers, data=payload)
+    if response.status_code == 404:
+        logging.error("Wrong key or hash value unable to sign")
+    response_json = response.json()
+    response_print = json.dumps(response_json)
+    logging.info('pss_verification response_print: {}'.format(response_print))
+    return response_json['result']
+
+
 def hash_file(filename, operation):
     """"This function returns the SHA-256 hash
    of the file passed into it"""
     logging.info("hash_file address: {}".format(filename))
     # make a hash object
-    if operation == 'SHA2-224':
-        h = hashlib.sha224()
-
-    if operation == 'SHA2-256':
-        h = hashlib.sha256()
-
-    if operation == 'SHA2-384':
-        h = hashlib.sha384()
-
-    if operation == 'SHA2-512':
-        h = hashlib.sha512()
 
     # open file for reading in binary mode
-    with open(filename, 'r') as file:
-        # loop till the end of the file
-        chunk = 0
-        while chunk != b'':
-            # read only 1024 bytes at a time
-            chunk = file.read(1024)
-            h.update(chunk)
+    with open(filename, 'rb') as m:
+        message = m.read()
+        if operation == 'SHA2-224':
+            h = hashlib.sha224(message)
+
+        if operation == 'SHA2-256':
+            h = hashlib.sha256(message)
+
+        if operation == 'SHA2-384':
+            h = hashlib.sha384(message)
+
+        if operation == 'SHA2-512':
+            h = hashlib.sha512(message)
+
+    m.close()
 
     # return the hex representation of digest
     logging.info("the digest value : {}".format(h.digest()))
     return h.digest()
-

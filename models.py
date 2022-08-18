@@ -9,6 +9,10 @@ class SigningField(FlaskForm):
     path = StringField(label="Enter file path")
     file_type = SelectField('Select image or digest', choices=[('image', 'image'), ('Digest',
                                                                                     'Digest')])
+
+    signing_type = SelectField('Select signature type', choices=[('RSA', 'RSA'),
+                                                                 ('RSA-PSS', 'RSA-PSS')])
+
     signing_alg = SelectField('Select signing algorithm', choices=[('SHA2-224', 'SHA2-224 bit'),
                                                                    ('SHA2-256', 'SHA2-256 bit'),
                                                                    ('SHA2-384', 'SHA2-384 bit'),
@@ -37,3 +41,18 @@ class HmacCsvField(FlaskForm):
 class Login(FlaskForm):
     user_name = TextAreaField(label="Enter user name")
     password = StringField(label="Enter password")
+
+
+class Verify(FlaskForm):
+    api_key = TextAreaField(label="Enter API key")
+    key_name = StringField(label="Enter key name")
+
+    signing_type = SelectField('Select signature type', choices=[('RSA', 'RSA'),
+                                                                 ('RSA-PSS', 'RSA-PSS')])
+
+    signing_alg = SelectField('Select signature algorithm', choices=[('SHA2-224', 'SHA2-224 bit'),
+                                                                     ('SHA2-256', 'SHA2-256 bit'),
+                                                                     ('SHA2-384', 'SHA2-384 bit'),
+                                                                     ('SHA2-512', 'SHA2-512 bit')])
+    digest = StringField(label="Enter digest")
+    signature = StringField(label="Enter signature")

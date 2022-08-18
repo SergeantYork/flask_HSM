@@ -37,36 +37,16 @@
 
                                 {{ form.signing_type(class="form-control", size =1) }}
 
-                                {{ form.file_type.label() }}
+                                {{ form.digest.label() }}
 
-                                {{ form.file_type(class="form-control", size =1) }}
-                                <br>
-                                <input type=file id="media" name=media>
-                                <br>
-                                <br>
-                                <div id="Progress_Status">
-                                        <div id="myprogressBar" style="font-size:2vw">....Uploading....</div>
-                                </div>
-                                <br>
-                                <input class="btn btn-lg btn-block btn-primary" onclick="update()" type="submit">
-                                <br>
+                                {{ form.digest(class="form-control", size =1) }}
 
+                                {{ form.signature.label() }}
+
+                                {{ form.signature(class="form-control", size =1) }}
+                                <br>
+                                <input class="btn btn-lg btn-block btn-primary" type="submit">
                         </form>
-          <script>
-                    function update() {
-                    var element = document.getElementById("myprogressBar");
-                    var width = 1;
-                    var identity = setInterval(scene, 100);
-                    function scene() {
-                    if (width >= 100) {
-                        clearInterval(identity);
-                    } else {
-                        width++;
-                        element.style.width = width + '%';
-                        }
-                    }
-                }
-        </script>
 
         </body>
 {% endblock %}
