@@ -30,3 +30,5 @@ Werkzeug==2.1.2
 wrapt==1.14.1
 WTForms==3.0.1
 termcolor==1.1.0
+cryptography~=37.0.4
+crypto~=1.4.1

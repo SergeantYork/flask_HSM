@@ -70,12 +70,12 @@ def gen_auth_request_for_sign(token, api_endpoint, key, hash_value, alg):
     }
 
     response = requests.request("POST", url, headers=headers, data=payload)
+    print('OAEP response {}'.format(response))
     if response.status_code == 404:
         logging.error("Wrong key or hash value unable to sign")
     response_json = response.json()["request_id"]
     response_print = json.dumps(response_json)
-
-    logging.info("gen_auth_request_for_sign: {}".format(response_print))
+    logging.info("gen_auth_request_for_sign_OAEP: {}".format(response_print))
     return response_json
 
 
@@ -111,7 +111,7 @@ def gen_auth_request_for_sign_pss(token, api_endpoint, key, hash_value, alg):
         logging.error("Wrong key or hash value unable to sign")
     response_json = response.json()["request_id"]
     response_print = json.dumps(response_json)
-    logging.info("gen_auth_request_for_sign_pss: {}".format(response_print))
+    logging.info("gen_auth_request_for_sign_PSS: {}".format(response_print))
     return response_json
 
 
@@ -155,7 +155,6 @@ def rsa_verification(api_endpoint, token, key, alg, hash_value, user_signature):
         "hash": "{}".format(hash_value),
         "signature": "{}".format(user_signature)
     })
-
     headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer {}'.format(token)
@@ -166,12 +165,11 @@ def rsa_verification(api_endpoint, token, key, alg, hash_value, user_signature):
         logging.error("Wrong key or hash value unable to sign")
     response_json = response.json()
     response_print = json.dumps(response_json)
-    logging.info("RSA verification: {}".format(response_print))
+    logging.info('OAEP_verification response_print: {}'.format(response_print))
     return response_json['result']
 
 
 def pss_verification(api_endpoint, token, key, alg, hash_value, user_signature):
-
     url = "{}/crypto/v1/verify".format(api_endpoint)
     payload = json.dumps({
         "key": {
@@ -200,7 +198,7 @@ def pss_verification(api_endpoint, token, key, alg, hash_value, user_signature):
         logging.error("Wrong key or hash value unable to sign")
     response_json = response.json()
     response_print = json.dumps(response_json)
-    logging.info('pss_verification response_print: {}'.format(response_print))
+    logging.info('PSS_verification response_print: {}'.format(response_print))
     return response_json['result']
 
 
@@ -228,5 +226,7 @@ def hash_file(filename, operation):
     m.close()
 
     # return the hex representation of digest
-    logging.info("the digest value : {}".format(h.digest()))
+    logging.info("*************the digest value : {}".format(h.digest()))
+    digest = h.digest()
+    logging.info("*************the length of digest : {}".format(len(digest)))
     return h.digest()

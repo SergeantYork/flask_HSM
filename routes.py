@@ -6,6 +6,15 @@ import logging
 import termcolor
 import base64
 
+from cryptography.hazmat.primitives import serialization
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.asymmetric import padding
+from cryptography.hazmat.primitives.asymmetric.utils import Prehashed
+
+from Cryptodome.Signature import pkcs1_15
+from Cryptodome.Hash import SHA
+from Cryptodome.PublicKey import RSA
+
 from csv import DictReader
 from typing import List, Dict
 
@@ -148,7 +157,6 @@ def sign_rsa_pss(api_end_point, api_key, key, hash_value, alg, path):
 
     with open('{}_signature.{}'.format(path, file_ending), 'w') as f:
         f.write('Request response:')
-
     logging.info('{}_signature.{}'.format(path, file_ending))
     append_new_line('{}_signature.{}'.format(path, file_ending),
                     "signature type RSA_PSS \n {}\n hash_value: {}".format(signature_string, hash_value))
@@ -198,7 +206,7 @@ def signing_progress():
     if signing_algorithm == 'SHA2-512':
         alg = 'Sha512'
 
-    if signing_type == 'RSA':
+    if signing_type == 'RSA-PKCSV1.5':
         file_signed = sign_rsa(api_end_point, api_key, key, hash_value, alg, path)
 
     if signing_type == 'RSA-PSS':
@@ -426,11 +434,11 @@ def verify_sign():
     if form.is_submitted():
         session['api_key'] = form.api_key.data
 
-        session['signing_key'] = form.key_name.data
+        session['signing_key'] = form.public_key.data
 
-        session['digest'] = form.digest.data
+        session['user_digest'] = form.digest.data
 
-        session['signature'] = form.signature.data
+        session['user_signature'] = form.signature.data
 
         session['signing_algorithm'] = form.signing_alg.data
 
@@ -446,13 +454,12 @@ def verify_progress():
     api_key = session.get('api_key', None)
     signing_key = session.get('signing_key', None)
     user_signature = session.get('user_signature', None)
-    user_digest = session.get('signing_algorithm', None)
+    user_digest = session.get('user_digest', None)
     signing_algorithm = session.get('signing_algorithm', None)
     signing_type = session.get('signing_type', None)
     logging.info("the digest value : {}".format(user_digest))
-
+    logging.info('the user digest length :{}'.format(len(user_digest)))
     api_end_point = end_point
-    key = signing_key
 
     if signing_algorithm == 'SHA2-224':
         alg = 'Sha224'
@@ -462,27 +469,103 @@ def verify_progress():
         alg = 'Sha384'
     if signing_algorithm == 'SHA2-512':
         alg = 'Sha512'
+    # this part is for hard coded verification using DSM
+    # api_key = ''
+    # session['token'] = get_auth(api_end_point, api_key)
+    # token = session.get('token', None)
 
-    session['token'] = get_auth(api_end_point, api_key)
-    token = session.get('token', None)
+    # if signing_type == 'RSA-PSS':
+    #     key = 'RSA'
+    #     session['verification_result'] = pss_verification(token=token, api_endpoint=api_end_point, key=key,
+    #                                                       hash_value=user_digest,
+    #                                                       alg=alg, user_signature=user_signature)
+    #     verification_res = session.get('verification_result', None)
+    #     logging.info('RSA-PSS verification result: {}'.format(verification_res))
+    #     print('RSA-PSS verification result: {}'.format(verification_res))
+    #
+    # if signing_type == 'RSA-PKCSV1.5':
+    #     key = 'RSA'
+    #     session['verification_result'] = rsa_verification(token=token, api_endpoint=api_end_point, key=key,
+    #                                                       hash_value=user_digest,
+    #                                                       alg=alg, user_signature=user_signature)
+    #     verification_res = session.get('verification_result', None)
+    #     logging.info('RSA-PKCSV1.5 verification result: {}'.format(verification_res))
+    #     print('RSA-PKCSV1.5 verification result: {}'.format(verification_res))
+
+    pem_prefix = '-----BEGIN RSA PRIVATE KEY-----\n'
+    pem_suffix = '\n-----END RSA PRIVATE KEY-----'
+    key = signing_key
+    public_key = signing_key
+    pem_key = '{}{}{}'.format(pem_prefix, public_key, pem_suffix)
+    logging.info('{}'.format(pem_key))
+
+    with open('rsa.pub', 'w') as f:
+        f.write('{}'.format(pem_key))
+
+    public_key_direct_import = serialization.load_pem_public_key(open('rsa.pub', 'rb').read())
+    public_key_direct_import_pem = public_key_direct_import.public_bytes(
+        encoding=serialization.Encoding.PEM,
+        format=serialization.PublicFormat.SubjectPublicKeyInfo)
+    logging.info('The public key direct import: {}'.format(public_key_direct_import_pem.splitlines()))
+
+    user_digest_base64_bytes = user_digest.encode('ascii')
+    user_digest_bytes = base64.b64decode(user_digest_base64_bytes)
+    user_signature_base64_bytes = user_signature.encode('ascii')
+    user_signature_bytes = base64.b64decode(user_signature_base64_bytes)
+
+    logging.info('*****The user_digest length: {}\n and value {}'.format(len(user_digest_bytes), user_digest_bytes))
+    logging.info('*****The user_signature length: {}\n and value {}'.format(len(user_signature_bytes),
+                                                                            user_signature_bytes))
+
+    if signing_type == 'RSA-PKCSV1.5':
+        if signing_algorithm == 'SHA2-224':
+            res = public_key_direct_import.verify(user_signature_bytes, user_digest_bytes, padding.PKCS1v15(),
+                                                  Prehashed(hashes.SHA224()))
+            logging.info('python verification successful {}'.format(res))
+        if signing_algorithm == 'SHA2-256':
+            res = public_key_direct_import.verify(user_signature_bytes, user_digest_bytes, padding.PKCS1v15(),
+                                                  Prehashed(hashes.SHA256()))
+            logging.info('python verification successful {}'.format(res))
+        if signing_algorithm == 'SHA2-384':
+            res = public_key_direct_import.verify(user_signature_bytes, user_digest_bytes, padding.PKCS1v15(),
+                                                  Prehashed(hashes.SHA384()))
+            logging.info('python verification successful {}'.format(res))
+        if signing_algorithm == 'SHA2-512':
+            res = public_key_direct_import.verify(user_signature_bytes, user_digest_bytes, padding.PKCS1v15(),
+                                                  Prehashed(hashes.SHA512()))
+        logging.info('python verification successful {}'.format(res))
+
+        if res is None:
+            logging.info("verification was successful")
+            return render_template('verification-result.html')
+        else:
+            logging.info("verification was not successful")
+            return render_template('error_page.html')
 
     if signing_type == 'RSA-PSS':
-        session['verification result'] = pss_verification(token=token, api_endpoint=api_end_point, key=key,
-                                                          hash_value=user_digest,
-                                                          alg=alg, user_signature=user_signature)
-    if signing_type == 'RSA':
-        session['verification result'] = rsa_verification(token=token, api_endpoint=api_end_point, key=key,
-                                                          hash_value=user_digest,
-                                                          alg=alg, user_signature=user_signature)
+        if signing_algorithm == 'SHA2-224':
+            res = public_key_direct_import.verify(user_signature_bytes, user_digest_bytes, padding.PSS(
+                mgf=padding.MGF1(hashes.SHA224()), salt_length=padding.PSS.AUTO), Prehashed(hashes.SHA224()))
+            logging.info('python verification successful {}'.format(res))
+        if signing_algorithm == 'SHA2-256':
+            res = public_key_direct_import.verify(user_signature_bytes, user_digest_bytes, padding.PSS(
+                mgf=padding.MGF1(hashes.SHA256()), salt_length=padding.PSS.AUTO), Prehashed(hashes.SHA256()))
+            logging.info('python verification successful {}'.format(res))
+        if signing_algorithm == 'SHA2-384':
+            res = public_key_direct_import.verify(user_signature_bytes, user_digest_bytes, padding.PSS(
+                mgf=padding.MGF1(hashes.SHA384()), salt_length=padding.PSS.AUTO), Prehashed(hashes.SHA384()))
+            logging.info('python verification successful {}'.format(res))
+        if signing_algorithm == 'SHA2-512':
+            res = public_key_direct_import.verify(user_signature_bytes, user_digest_bytes, padding.PSS(
+                mgf=padding.MGF1(hashes.SHA512()), salt_length=padding.PSS.AUTO), Prehashed(hashes.SHA512()))
+        logging.info('python verification successful {}'.format(res))
 
-    verification_result = session.get('verification result', None)
-
-    if verification_result:
-        logging.info("verification was successful")
-        return render_template('verification-result.html')
-    if not verification_result:
-        logging.info("verification was not successful")
-        return render_template('error_page.html')
+        if res is None:
+            logging.info("verification was successful")
+            return render_template('verification-result.html')
+        else:
+            logging.info("verification was not successful")
+            return render_template('error_page.html')
 
 
 @app.route('/hmac-csv', methods=['GET', 'POST'])

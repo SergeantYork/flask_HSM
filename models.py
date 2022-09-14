@@ -10,7 +10,7 @@ class SigningField(FlaskForm):
     file_type = SelectField('Select image or digest', choices=[('image', 'image'), ('Digest',
                                                                                     'Digest')])
 
-    signing_type = SelectField('Select signature type', choices=[('RSA', 'RSA'),
+    signing_type = SelectField('Select signature type', choices=[('RSA-PKCSV1.5', 'RSA-PKCSV1.5'),
                                                                  ('RSA-PSS', 'RSA-PSS')])
 
     signing_alg = SelectField('Select signing algorithm', choices=[('SHA2-224', 'SHA2-224 bit'),
@@ -45,9 +45,9 @@ class Login(FlaskForm):
 
 class Verify(FlaskForm):
     api_key = TextAreaField(label="Enter API key")
-    key_name = StringField(label="Enter key name")
+    public_key = StringField(label="Enter public key")
 
-    signing_type = SelectField('Select signature type', choices=[('RSA', 'RSA'),
+    signing_type = SelectField('Select signature type', choices=[('RSA-PKCSV1.5', 'RSA-PKCSV1.5'),
                                                                  ('RSA-PSS', 'RSA-PSS')])
 
     signing_alg = SelectField('Select signature algorithm', choices=[('SHA2-224', 'SHA2-224 bit'),

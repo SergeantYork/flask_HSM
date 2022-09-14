@@ -1,156 +1,243 @@
-2022-08-18 16:26:51,294 - INFO - 127.0.0.1 - - [18/Aug/2022 16:26:51] "POST /signing-file HTTP/1.1" 200 -
-2022-08-18 16:26:51,294 - INFO - 127.0.0.1 - - [18/Aug/2022 16:26:51] "POST /signing-file HTTP/1.1" 200 -
-2022-08-18 16:26:51,294 - INFO - 127.0.0.1 - - [18/Aug/2022 16:26:51] "POST /signing-file HTTP/1.1" 200 -
-2022-08-18 16:26:51,305 - INFO - 127.0.0.1 - - [18/Aug/2022 16:26:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:26:51,305 - INFO - 127.0.0.1 - - [18/Aug/2022 16:26:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:26:51,305 - INFO - 127.0.0.1 - - [18/Aug/2022 16:26:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:26:51,339 - INFO - 127.0.0.1 - - [18/Aug/2022 16:26:51] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:26:51,339 - INFO - 127.0.0.1 - - [18/Aug/2022 16:26:51] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:26:51,339 - INFO - 127.0.0.1 - - [18/Aug/2022 16:26:51] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:26:51,350 - INFO - 127.0.0.1 - - [18/Aug/2022 16:26:51] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:26:51,350 - INFO - 127.0.0.1 - - [18/Aug/2022 16:26:51] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:26:51,350 - INFO - 127.0.0.1 - - [18/Aug/2022 16:26:51] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:26:51,489 - INFO - file path: C:\Users\wachterr\Documents\flask_HSM/static/binary.bin
-2022-08-18 16:26:51,489 - INFO - file path: C:\Users\wachterr\Documents\flask_HSM/static/binary.bin
-2022-08-18 16:26:51,489 - INFO - file path: C:\Users\wachterr\Documents\flask_HSM/static/binary.bin
-2022-08-18 16:26:51,489 - INFO - hash_file address: C:\Users\wachterr\Documents\flask_HSM/static/binary.bin
-2022-08-18 16:26:51,489 - INFO - hash_file address: C:\Users\wachterr\Documents\flask_HSM/static/binary.bin
-2022-08-18 16:26:51,489 - INFO - hash_file address: C:\Users\wachterr\Documents\flask_HSM/static/binary.bin
-2022-08-18 16:26:51,509 - INFO - the digest value : b'\xd1\xa9,\xcc@\x96b3xOr\x01)Z}\xd1\xbd\xeb_\xbe\xb38u\xad2 #\x98'
-2022-08-18 16:26:51,509 - INFO - the digest value : b'\xd1\xa9,\xcc@\x96b3xOr\x01)Z}\xd1\xbd\xeb_\xbe\xb38u\xad2 #\x98'
-2022-08-18 16:26:51,509 - INFO - the digest value : b'\xd1\xa9,\xcc@\x96b3xOr\x01)Z}\xd1\xbd\xeb_\xbe\xb38u\xad2 #\x98'
-2022-08-18 16:26:51,510 - INFO - SHA-Digest Generation
-2022-08-18 16:26:51,510 - INFO - SHA-Digest Generation
-2022-08-18 16:26:51,510 - INFO - SHA-Digest Generation
-2022-08-18 16:26:51,510 - INFO - the digest value : bytearray(b'\xd1\xa9,\xcc@\x96b3xOr\x01)Z}\xd1\xbd\xeb_\xbe\xb38u\xad2 #\x98')
-2022-08-18 16:26:51,510 - INFO - the digest value : bytearray(b'\xd1\xa9,\xcc@\x96b3xOr\x01)Z}\xd1\xbd\xeb_\xbe\xb38u\xad2 #\x98')
-2022-08-18 16:26:51,510 - INFO - the digest value : bytearray(b'\xd1\xa9,\xcc@\x96b3xOr\x01)Z}\xd1\xbd\xeb_\xbe\xb38u\xad2 #\x98')
-2022-08-18 16:26:51,510 - INFO - the hash value : 0akszECWYjN4T3IBKVp90b3rX76zOHWtMiAjmA==
-2022-08-18 16:26:51,510 - INFO - the hash value : 0akszECWYjN4T3IBKVp90b3rX76zOHWtMiAjmA==
-2022-08-18 16:26:51,510 - INFO - the hash value : 0akszECWYjN4T3IBKVp90b3rX76zOHWtMiAjmA==
-2022-08-18 16:26:51,510 - INFO - sign_rsa api_end_point: https://eu.smartkey.io/
-2022-08-18 16:26:51,510 - INFO - sign_rsa api_end_point: https://eu.smartkey.io/
-2022-08-18 16:26:51,510 - INFO - sign_rsa api_end_point: https://eu.smartkey.io/
-2022-08-18 16:26:51,510 - INFO - sign_rsa api_key: NmQyOWEwMzgtZmNjMy00ZTAxLWEwYjEtYjIxOWIyNzY2Y2E3OkV0dmZ1NTZ4ZmV0WktUZXlUYnY4azc5M2ZDREdRZG5XYjRINlU2WE9IcDJ3T1dhNFNnRDlEUGZ6ZVFRLTcxYW5oT1JNblBtVmozUmRJUHNLMmtySGZn
-2022-08-18 16:26:51,510 - INFO - sign_rsa api_key: NmQyOWEwMzgtZmNjMy00ZTAxLWEwYjEtYjIxOWIyNzY2Y2E3OkV0dmZ1NTZ4ZmV0WktUZXlUYnY4azc5M2ZDREdRZG5XYjRINlU2WE9IcDJ3T1dhNFNnRDlEUGZ6ZVFRLTcxYW5oT1JNblBtVmozUmRJUHNLMmtySGZn
-2022-08-18 16:26:51,510 - INFO - sign_rsa api_key: NmQyOWEwMzgtZmNjMy00ZTAxLWEwYjEtYjIxOWIyNzY2Y2E3OkV0dmZ1NTZ4ZmV0WktUZXlUYnY4azc5M2ZDREdRZG5XYjRINlU2WE9IcDJ3T1dhNFNnRDlEUGZ6ZVFRLTcxYW5oT1JNblBtVmozUmRJUHNLMmtySGZn
-2022-08-18 16:26:51,511 - INFO - sign_rsa key: RSA
-2022-08-18 16:26:51,511 - INFO - sign_rsa key: RSA
-2022-08-18 16:26:51,511 - INFO - sign_rsa key: RSA
-2022-08-18 16:26:51,511 - INFO - sign_rsa hash_value: 0akszECWYjN4T3IBKVp90b3rX76zOHWtMiAjmA==
-2022-08-18 16:26:51,511 - INFO - sign_rsa hash_value: 0akszECWYjN4T3IBKVp90b3rX76zOHWtMiAjmA==
-2022-08-18 16:26:51,511 - INFO - sign_rsa hash_value: 0akszECWYjN4T3IBKVp90b3rX76zOHWtMiAjmA==
-2022-08-18 16:26:51,511 - INFO - sign_rsa alg: Sha224
-2022-08-18 16:26:51,511 - INFO - sign_rsa alg: Sha224
-2022-08-18 16:26:51,511 - INFO - sign_rsa alg: Sha224
-2022-08-18 16:26:51,511 - INFO - sign_rsa path: C:\Users\wachterr\Documents\flask_HSM/static/binary.bin
-2022-08-18 16:26:51,511 - INFO - sign_rsa path: C:\Users\wachterr\Documents\flask_HSM/static/binary.bin
-2022-08-18 16:26:51,511 - INFO - sign_rsa path: C:\Users\wachterr\Documents\flask_HSM/static/binary.bin
-2022-08-18 16:26:52,027 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "ccBNULpYNsCNGHiz712QyuV4aAElTR-2zZH8eovG3-EJBLHmpZKd4RC0Js3edAHbZpVKn1uvcpoBPzXO8kQcCg", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
-2022-08-18 16:26:52,027 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "ccBNULpYNsCNGHiz712QyuV4aAElTR-2zZH8eovG3-EJBLHmpZKd4RC0Js3edAHbZpVKn1uvcpoBPzXO8kQcCg", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
-2022-08-18 16:26:52,027 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "ccBNULpYNsCNGHiz712QyuV4aAElTR-2zZH8eovG3-EJBLHmpZKd4RC0Js3edAHbZpVKn1uvcpoBPzXO8kQcCg", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
-2022-08-18 16:26:52,027 - INFO - sign_rsa token: ccBNULpYNsCNGHiz712QyuV4aAElTR-2zZH8eovG3-EJBLHmpZKd4RC0Js3edAHbZpVKn1uvcpoBPzXO8kQcCg
-2022-08-18 16:26:52,027 - INFO - sign_rsa token: ccBNULpYNsCNGHiz712QyuV4aAElTR-2zZH8eovG3-EJBLHmpZKd4RC0Js3edAHbZpVKn1uvcpoBPzXO8kQcCg
-2022-08-18 16:26:52,027 - INFO - sign_rsa token: ccBNULpYNsCNGHiz712QyuV4aAElTR-2zZH8eovG3-EJBLHmpZKd4RC0Js3edAHbZpVKn1uvcpoBPzXO8kQcCg
-2022-08-18 16:26:52,730 - INFO - gen_auth_request_for_sign: "8b66edb1-0c0f-4d5a-8a75-ca6066090e12"
-2022-08-18 16:26:52,730 - INFO - gen_auth_request_for_sign: "8b66edb1-0c0f-4d5a-8a75-ca6066090e12"
-2022-08-18 16:26:52,730 - INFO - gen_auth_request_for_sign: "8b66edb1-0c0f-4d5a-8a75-ca6066090e12"
-2022-08-18 16:26:52,730 - INFO - sign_rsa request_id: 8b66edb1-0c0f-4d5a-8a75-ca6066090e12
-2022-08-18 16:26:52,730 - INFO - sign_rsa request_id: 8b66edb1-0c0f-4d5a-8a75-ca6066090e12
-2022-08-18 16:26:52,730 - INFO - sign_rsa request_id: 8b66edb1-0c0f-4d5a-8a75-ca6066090e12
-2022-08-18 16:26:52,730 - INFO - my digest:0akszECWYjN4T3IBKVp90b3rX76zOHWtMiAjmA==
-2022-08-18 16:26:52,730 - INFO - my digest:0akszECWYjN4T3IBKVp90b3rX76zOHWtMiAjmA==
-2022-08-18 16:26:52,730 - INFO - my digest:0akszECWYjN4T3IBKVp90b3rX76zOHWtMiAjmA==
-2022-08-18 16:26:52,730 - INFO - waiting for quorum approval
-2022-08-18 16:26:52,730 - INFO - waiting for quorum approval
-2022-08-18 16:26:52,730 - INFO - waiting for quorum approval
-2022-08-18 16:26:59,552 - INFO - Request approved getting signature
-2022-08-18 16:26:59,552 - INFO - Request approved getting signature
-2022-08-18 16:26:59,552 - INFO - Request approved getting signature
-2022-08-18 16:27:00,235 - INFO - get_sign: {"status": 200, "body": {"kid": "dbba00fa-cef4-44cc-8aa5-d13bf8ff64bf", "signature": "ZlBIUs+prSV83DJS6TQyPMab2JN8G7AfzlNTPaen8nk5ZWOtr48Q2rpqkfPGSoo1XeZaCEv49bCrWMKYpQu5gennQKwvASJbSbQ0c+h2D9GAKYmyw02ImIOpXAKxCk5JNsKwRcJA2Iiwu2d1RyC4mu/1XXuGAN0ytP6010S2B+yUi1D2Xlu58NFi2Qbewf38faXOOm1/NpEGRqmA7pOEneCZ64+7tE1oQrBSuBQfqpEYtjV0MlwICn34ZzrdXVPvEnWhofiarRfwjXSVzyMZpeGBbZyBWcS4hqjkAhxuz6uK8UDXYmuc/E7y1Vn8zONy2hss+Ax8lrGlLor0oH3P2w=="}}
-2022-08-18 16:27:00,235 - INFO - get_sign: {"status": 200, "body": {"kid": "dbba00fa-cef4-44cc-8aa5-d13bf8ff64bf", "signature": "ZlBIUs+prSV83DJS6TQyPMab2JN8G7AfzlNTPaen8nk5ZWOtr48Q2rpqkfPGSoo1XeZaCEv49bCrWMKYpQu5gennQKwvASJbSbQ0c+h2D9GAKYmyw02ImIOpXAKxCk5JNsKwRcJA2Iiwu2d1RyC4mu/1XXuGAN0ytP6010S2B+yUi1D2Xlu58NFi2Qbewf38faXOOm1/NpEGRqmA7pOEneCZ64+7tE1oQrBSuBQfqpEYtjV0MlwICn34ZzrdXVPvEnWhofiarRfwjXSVzyMZpeGBbZyBWcS4hqjkAhxuz6uK8UDXYmuc/E7y1Vn8zONy2hss+Ax8lrGlLor0oH3P2w=="}}
-2022-08-18 16:27:00,235 - INFO - get_sign: {"status": 200, "body": {"kid": "dbba00fa-cef4-44cc-8aa5-d13bf8ff64bf", "signature": "ZlBIUs+prSV83DJS6TQyPMab2JN8G7AfzlNTPaen8nk5ZWOtr48Q2rpqkfPGSoo1XeZaCEv49bCrWMKYpQu5gennQKwvASJbSbQ0c+h2D9GAKYmyw02ImIOpXAKxCk5JNsKwRcJA2Iiwu2d1RyC4mu/1XXuGAN0ytP6010S2B+yUi1D2Xlu58NFi2Qbewf38faXOOm1/NpEGRqmA7pOEneCZ64+7tE1oQrBSuBQfqpEYtjV0MlwICn34ZzrdXVPvEnWhofiarRfwjXSVzyMZpeGBbZyBWcS4hqjkAhxuz6uK8UDXYmuc/E7y1Vn8zONy2hss+Ax8lrGlLor0oH3P2w=="}}
-2022-08-18 16:27:00,237 - INFO - C:\Users\wachterr\Documents\flask_HSM/static/binary.bin_signature.txt
-2022-08-18 16:27:00,237 - INFO - C:\Users\wachterr\Documents\flask_HSM/static/binary.bin_signature.txt
-2022-08-18 16:27:00,237 - INFO - C:\Users\wachterr\Documents\flask_HSM/static/binary.bin_signature.txt
-2022-08-18 16:27:00,239 - INFO - Request approved
-2022-08-18 16:27:00,239 - INFO - Request approved
-2022-08-18 16:27:00,239 - INFO - Request approved
-2022-08-18 16:27:00,242 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:00] "GET /signing-progress HTTP/1.1" 200 -
-2022-08-18 16:27:00,242 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:00] "GET /signing-progress HTTP/1.1" 200 -
-2022-08-18 16:27:00,242 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:00] "GET /signing-progress HTTP/1.1" 200 -
-2022-08-18 16:27:00,254 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:27:00,254 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:27:00,254 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:00] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:27:00,291 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:00] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:27:00,291 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:00] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:27:00,291 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:00] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:27:00,312 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:00] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:27:00,312 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:00] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:27:00,312 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:00] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:27:07,622 - INFO - full path download: C:\Users\wachterr\Documents\flask_HSM/static/
-2022-08-18 16:27:07,622 - INFO - full path download: C:\Users\wachterr\Documents\flask_HSM/static/
-2022-08-18 16:27:07,622 - INFO - full path download: C:\Users\wachterr\Documents\flask_HSM/static/
-2022-08-18 16:27:07,622 - INFO - full path download with file name: C:\Users\wachterr\Documents\flask_HSM/static/binary.bin_signature.txt
-2022-08-18 16:27:07,622 - INFO - full path download with file name: C:\Users\wachterr\Documents\flask_HSM/static/binary.bin_signature.txt
-2022-08-18 16:27:07,622 - INFO - full path download with file name: C:\Users\wachterr\Documents\flask_HSM/static/binary.bin_signature.txt
-2022-08-18 16:27:07,624 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:07] "GET /download HTTP/1.1" 200 -
-2022-08-18 16:27:07,624 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:07] "GET /download HTTP/1.1" 200 -
-2022-08-18 16:27:07,624 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:07] "GET /download HTTP/1.1" 200 -
-2022-08-18 16:27:20,993 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:20] "GET /signing HTTP/1.1" 200 -
-2022-08-18 16:27:20,993 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:20] "GET /signing HTTP/1.1" 200 -
-2022-08-18 16:27:20,993 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:20] "GET /signing HTTP/1.1" 200 -
-2022-08-18 16:27:21,007 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:21] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:27:21,007 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:21] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:27:21,007 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:21] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:27:21,044 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:21] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:27:21,044 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:21] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:27:21,044 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:21] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:27:21,059 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:21] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:27:21,059 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:21] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:27:21,059 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:21] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:27:22,823 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:22] "GET /verify-sign HTTP/1.1" 200 -
-2022-08-18 16:27:22,823 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:22] "GET /verify-sign HTTP/1.1" 200 -
-2022-08-18 16:27:22,823 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:22] "GET /verify-sign HTTP/1.1" 200 -
-2022-08-18 16:27:22,847 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:22] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:27:22,847 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:22] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:27:22,847 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:22] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:27:22,861 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:22] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:27:22,861 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:22] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:27:22,861 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:22] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:27:22,875 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:22] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:27:22,875 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:22] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:27:22,875 - INFO - 127.0.0.1 - - [18/Aug/2022 16:27:22] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:28:34,408 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:34] "POST /verify-sign HTTP/1.1" 200 -
-2022-08-18 16:28:34,408 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:34] "POST /verify-sign HTTP/1.1" 200 -
-2022-08-18 16:28:34,408 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:34] "POST /verify-sign HTTP/1.1" 200 -
-2022-08-18 16:28:34,433 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:28:34,433 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:28:34,433 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:34] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
-2022-08-18 16:28:34,484 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:34] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:28:34,484 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:34] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:28:34,484 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:34] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
-2022-08-18 16:28:34,491 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:34] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:28:34,491 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:34] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:28:34,491 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:34] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
-2022-08-18 16:28:34,627 - INFO - the digest value : SHA2-256
-2022-08-18 16:28:34,627 - INFO - the digest value : SHA2-256
-2022-08-18 16:28:34,627 - INFO - the digest value : SHA2-256
-2022-08-18 16:28:35,181 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "41i-rS9JDMsqaZs5eRzCFMZno9LJeGrKXdvRD0PM7GMkjTHp0ICCR9C-x7IT8vpy144ikcHarY8rTF4L_dHmfA", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
-2022-08-18 16:28:35,181 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "41i-rS9JDMsqaZs5eRzCFMZno9LJeGrKXdvRD0PM7GMkjTHp0ICCR9C-x7IT8vpy144ikcHarY8rTF4L_dHmfA", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
-2022-08-18 16:28:35,181 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "41i-rS9JDMsqaZs5eRzCFMZno9LJeGrKXdvRD0PM7GMkjTHp0ICCR9C-x7IT8vpy144ikcHarY8rTF4L_dHmfA", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
-2022-08-18 16:28:35,646 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[35m[1mGET /verify-progress HTTP/1.1[0m" 500 -
-2022-08-18 16:28:35,646 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[35m[1mGET /verify-progress HTTP/1.1[0m" 500 -
-2022-08-18 16:28:35,646 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[35m[1mGET /verify-progress HTTP/1.1[0m" 500 -
-2022-08-18 16:28:35,661 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2022-08-18 16:28:35,661 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2022-08-18 16:28:35,661 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
-2022-08-18 16:28:35,663 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2022-08-18 16:28:35,663 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2022-08-18 16:28:35,663 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
-2022-08-18 16:28:35,709 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2022-08-18 16:28:35,709 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2022-08-18 16:28:35,709 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2022-08-18 16:28:35,742 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2022-08-18 16:28:35,742 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
-2022-08-18 16:28:35,742 - INFO - 127.0.0.1 - - [18/Aug/2022 16:28:35] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-09-13 12:28:10,645 - INFO - download_path: C:\Users\wachterr\Documents\flask_HSM/static//my_picture.PNG_1663061290.6403067_log.txt
+2022-09-13 12:28:10,645 - INFO - download_path: C:\Users\wachterr\Documents\flask_HSM/static//my_picture.PNG_1663061290.6403067_log.txt
+2022-09-13 12:28:10,645 - INFO - download_path: C:\Users\wachterr\Documents\flask_HSM/static//my_picture.PNG_1663061290.6403067_log.txt
+2022-09-13 12:28:10,647 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:10] "GET /download_log HTTP/1.1" 200 -
+2022-09-13 12:28:10,647 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:10] "GET /download_log HTTP/1.1" 200 -
+2022-09-13 12:28:10,647 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:10] "GET /download_log HTTP/1.1" 200 -
+2022-09-13 12:28:17,564 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:17] "GET /signing HTTP/1.1" 200 -
+2022-09-13 12:28:17,564 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:17] "GET /signing HTTP/1.1" 200 -
+2022-09-13 12:28:17,564 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:17] "GET /signing HTTP/1.1" 200 -
+2022-09-13 12:28:17,581 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:28:17,581 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:28:17,581 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:17] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:28:17,651 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:17] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:28:17,651 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:17] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:28:17,651 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:17] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:28:17,714 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:17] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:28:17,714 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:17] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:28:17,714 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:17] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:28:18,783 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:18] "GET /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:28:18,783 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:18] "GET /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:28:18,783 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:18] "GET /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:28:18,806 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:28:18,806 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:28:18,806 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:18] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:28:18,864 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:18] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:28:18,864 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:18] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:28:18,864 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:18] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:28:18,980 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:18] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:28:18,980 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:18] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:28:18,980 - INFO - 127.0.0.1 - - [13/Sep/2022 12:28:18] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:29:23,914 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:23] "POST /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:29:23,914 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:23] "POST /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:29:23,914 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:23] "POST /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:29:23,932 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:23] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:29:23,932 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:23] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:29:23,932 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:23] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:29:23,995 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:23] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:29:23,995 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:23] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:29:23,995 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:23] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:29:24,362 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:24] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:29:24,362 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:24] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:29:24,362 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:24] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:29:24,393 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-13 12:29:24,393 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-13 12:29:24,393 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-13 12:29:24,394 - INFO - the user digest length :44
+2022-09-13 12:29:24,394 - INFO - the user digest length :44
+2022-09-13 12:29:24,394 - INFO - the user digest length :44
+2022-09-13 12:29:25,067 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "o6hlf_--3zjGsIg5rqlzfrNjDoZyWjm3kKOIOGUvI5zYBckKE0tyZYn_sL8_OybXN6ZCA36eaxr3-X7ADfTn9Q", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
+2022-09-13 12:29:25,067 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "o6hlf_--3zjGsIg5rqlzfrNjDoZyWjm3kKOIOGUvI5zYBckKE0tyZYn_sL8_OybXN6ZCA36eaxr3-X7ADfTn9Q", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
+2022-09-13 12:29:25,067 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "o6hlf_--3zjGsIg5rqlzfrNjDoZyWjm3kKOIOGUvI5zYBckKE0tyZYn_sL8_OybXN6ZCA36eaxr3-X7ADfTn9Q", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
+2022-09-13 12:29:25,788 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[35m[1mGET /verify-progress HTTP/1.1[0m" 500 -
+2022-09-13 12:29:25,788 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[35m[1mGET /verify-progress HTTP/1.1[0m" 500 -
+2022-09-13 12:29:25,788 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[35m[1mGET /verify-progress HTTP/1.1[0m" 500 -
+2022-09-13 12:29:25,804 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-09-13 12:29:25,804 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-09-13 12:29:25,804 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-09-13 12:29:25,806 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-09-13 12:29:25,806 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-09-13 12:29:25,806 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-09-13 12:29:25,876 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-09-13 12:29:25,876 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-09-13 12:29:25,876 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-09-13 12:29:25,935 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-09-13 12:29:25,935 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-09-13 12:29:25,935 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:25] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-09-13 12:29:51,626 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:51] "GET /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:29:51,626 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:51] "GET /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:29:51,626 - INFO - 127.0.0.1 - - [13/Sep/2022 12:29:51] "GET /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:30:05,310 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:05] "POST /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:30:05,310 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:05] "POST /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:30:05,310 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:05] "POST /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:30:05,341 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:05,341 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:05,341 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:05] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:05,400 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:05] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:05,400 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:05] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:05,400 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:05] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:05,450 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:05] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:30:05,450 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:05] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:30:05,450 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:05] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:30:05,524 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-13 12:30:05,524 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-13 12:30:05,524 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-13 12:30:05,524 - INFO - the user digest length :44
+2022-09-13 12:30:05,524 - INFO - the user digest length :44
+2022-09-13 12:30:05,524 - INFO - the user digest length :44
+2022-09-13 12:30:06,176 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "gQO0QvGOAR1iier710qYws-h8KG7oBikiILFFcilLQe8SPLlENc_s8_w_8Kdg6kHr3rQf9c-3Q-ISlO0KdYRhA", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
+2022-09-13 12:30:06,176 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "gQO0QvGOAR1iier710qYws-h8KG7oBikiILFFcilLQe8SPLlENc_s8_w_8Kdg6kHr3rQf9c-3Q-ISlO0KdYRhA", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
+2022-09-13 12:30:06,176 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "gQO0QvGOAR1iier710qYws-h8KG7oBikiILFFcilLQe8SPLlENc_s8_w_8Kdg6kHr3rQf9c-3Q-ISlO0KdYRhA", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
+2022-09-13 12:30:06,876 - INFO - OAEP_verification response_print: {"kid": "dbba00fa-cef4-44cc-8aa5-d13bf8ff64bf", "result": false}
+2022-09-13 12:30:06,876 - INFO - OAEP_verification response_print: {"kid": "dbba00fa-cef4-44cc-8aa5-d13bf8ff64bf", "result": false}
+2022-09-13 12:30:06,876 - INFO - OAEP_verification response_print: {"kid": "dbba00fa-cef4-44cc-8aa5-d13bf8ff64bf", "result": false}
+2022-09-13 12:30:06,876 - INFO - RSA-PKCSV1.5 verification result: False
+2022-09-13 12:30:06,876 - INFO - RSA-PKCSV1.5 verification result: False
+2022-09-13 12:30:06,876 - INFO - RSA-PKCSV1.5 verification result: False
+2022-09-13 12:30:06,876 - INFO - -----BEGIN RSA PRIVATE KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PRIVATE KEY-----
+2022-09-13 12:30:06,876 - INFO - -----BEGIN RSA PRIVATE KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PRIVATE KEY-----
+2022-09-13 12:30:06,876 - INFO - -----BEGIN RSA PRIVATE KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PRIVATE KEY-----
+2022-09-13 12:30:06,883 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-13 12:30:06,883 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-13 12:30:06,883 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-13 12:30:06,883 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-13 12:30:06,883 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-13 12:30:06,883 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-13 12:30:06,883 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-13 12:30:06,883 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-13 12:30:06,883 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-13 12:30:06,916 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:06] "[35m[1mGET /verify-progress HTTP/1.1[0m" 500 -
+2022-09-13 12:30:06,916 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:06] "[35m[1mGET /verify-progress HTTP/1.1[0m" 500 -
+2022-09-13 12:30:06,916 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:06] "[35m[1mGET /verify-progress HTTP/1.1[0m" 500 -
+2022-09-13 12:30:06,933 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:06] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:06,933 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:06] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:06,933 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:06] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:06,935 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:06] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-09-13 12:30:06,935 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:06] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-09-13 12:30:06,935 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:06] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-09-13 12:30:06,995 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:06] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:06,995 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:06] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:06,995 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:06] "[36mGET /verify-progress?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:40,365 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:40] "GET /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:30:40,365 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:40] "GET /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:30:40,365 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:40] "GET /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:30:45,163 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:45] "POST /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:30:45,163 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:45] "POST /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:30:45,163 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:45] "POST /verify-sign HTTP/1.1" 200 -
+2022-09-13 12:30:45,184 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:45,184 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:45,184 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:45] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:45,265 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:45] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:45,265 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:45] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:45,265 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:45] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:45,311 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:45] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:30:45,311 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:45] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:30:45,311 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:45] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:30:45,376 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-13 12:30:45,376 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-13 12:30:45,376 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-13 12:30:45,376 - INFO - the user digest length :44
+2022-09-13 12:30:45,376 - INFO - the user digest length :44
+2022-09-13 12:30:45,376 - INFO - the user digest length :44
+2022-09-13 12:30:46,011 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "bs8ZWFieYRFvFlwDN23IoMJMn94cORUIHpdXo5wsu7DMi4wXR8z8Gcdj8YNKgOmBvThpiVM8lwt6yQ80rTQ8gw", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
+2022-09-13 12:30:46,011 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "bs8ZWFieYRFvFlwDN23IoMJMn94cORUIHpdXo5wsu7DMi4wXR8z8Gcdj8YNKgOmBvThpiVM8lwt6yQ80rTQ8gw", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
+2022-09-13 12:30:46,011 - INFO - get_auth: {"token_type": "Bearer", "expires_in": 600, "access_token": "bs8ZWFieYRFvFlwDN23IoMJMn94cORUIHpdXo5wsu7DMi4wXR8z8Gcdj8YNKgOmBvThpiVM8lwt6yQ80rTQ8gw", "entity_id": "6d29a038-fcc3-4e01-a0b1-b219b2766ca7", "fido2_assertion_options": null}
+2022-09-13 12:30:46,689 - INFO - PSS_verification response_print: {"kid": "dbba00fa-cef4-44cc-8aa5-d13bf8ff64bf", "result": true}
+2022-09-13 12:30:46,689 - INFO - PSS_verification response_print: {"kid": "dbba00fa-cef4-44cc-8aa5-d13bf8ff64bf", "result": true}
+2022-09-13 12:30:46,689 - INFO - PSS_verification response_print: {"kid": "dbba00fa-cef4-44cc-8aa5-d13bf8ff64bf", "result": true}
+2022-09-13 12:30:46,690 - INFO - RSA-PSS verification result: True
+2022-09-13 12:30:46,690 - INFO - RSA-PSS verification result: True
+2022-09-13 12:30:46,690 - INFO - RSA-PSS verification result: True
+2022-09-13 12:30:46,691 - INFO - -----BEGIN RSA PRIVATE KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PRIVATE KEY-----
+2022-09-13 12:30:46,691 - INFO - -----BEGIN RSA PRIVATE KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PRIVATE KEY-----
+2022-09-13 12:30:46,691 - INFO - -----BEGIN RSA PRIVATE KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PRIVATE KEY-----
+2022-09-13 12:30:46,705 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-13 12:30:46,705 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-13 12:30:46,705 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-13 12:30:46,706 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-13 12:30:46,706 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-13 12:30:46,706 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-13 12:30:46,707 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-13 12:30:46,707 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-13 12:30:46,707 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-13 12:30:46,708 - INFO - python verification successful None
+2022-09-13 12:30:46,708 - INFO - python verification successful None
+2022-09-13 12:30:46,708 - INFO - python verification successful None
+2022-09-13 12:30:46,709 - INFO - python verification successful None
+2022-09-13 12:30:46,709 - INFO - python verification successful None
+2022-09-13 12:30:46,709 - INFO - python verification successful None
+2022-09-13 12:30:46,709 - INFO - verification was successful
+2022-09-13 12:30:46,709 - INFO - verification was successful
+2022-09-13 12:30:46,709 - INFO - verification was successful
+2022-09-13 12:30:46,719 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:46] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-13 12:30:46,719 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:46] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-13 12:30:46,719 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:46] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-13 12:30:46,758 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:46,758 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:46,758 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:46] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:46,819 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:46] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:46,819 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:46] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:46,819 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:46] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:46,865 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:46] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:30:46,865 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:46] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:30:46,865 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:46] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:30:49,172 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:49] "GET /signing HTTP/1.1" 200 -
+2022-09-13 12:30:49,172 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:49] "GET /signing HTTP/1.1" 200 -
+2022-09-13 12:30:49,172 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:49] "GET /signing HTTP/1.1" 200 -
+2022-09-13 12:30:49,195 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:49,195 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:49,195 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:49] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-13 12:30:49,239 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:49] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:49,239 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:49] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:49,239 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:49] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-13 12:30:49,277 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:49] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:30:49,277 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:49] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 12:30:49,277 - INFO - 127.0.0.1 - - [13/Sep/2022 12:30:49] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-13 14:21:15,843 - INFO -  * Detected change in 'C:\\Users\\wachterr\\Documents\\flask_HSM\\routes.py', reloading
+2022-09-13 14:21:15,843 - INFO -  * Detected change in 'C:\\Users\\wachterr\\Documents\\flask_HSM\\routes.py', reloading
+2022-09-13 14:21:15,843 - INFO -  * Detected change in 'C:\\Users\\wachterr\\Documents\\flask_HSM\\routes.py', reloading
+2022-09-13 14:21:15,931 - INFO -  * Restarting with stat
+2022-09-13 14:21:15,931 - INFO -  * Restarting with stat
+2022-09-13 14:21:15,931 - INFO -  * Restarting with stat
+2022-09-13 14:21:16,491 - WARNING -  * Debugger is active!
+2022-09-13 14:21:16,491 - WARNING -  * Debugger is active!
+2022-09-13 14:21:16,491 - WARNING -  * Debugger is active!
+2022-09-13 14:21:16,494 - INFO -  * Debugger PIN: 893-582-709
+2022-09-13 14:21:16,494 - INFO -  * Debugger PIN: 893-582-709
+2022-09-13 14:21:16,494 - INFO -  * Debugger PIN: 893-582-709
+2022-09-14 13:11:45,334 - INFO -  * Detected change in 'C:\\Users\\wachterr\\Documents\\flask_HSM\\routes.py', reloading
+2022-09-14 13:11:45,334 - INFO -  * Detected change in 'C:\\Users\\wachterr\\Documents\\flask_HSM\\routes.py', reloading
+2022-09-14 13:11:45,334 - INFO -  * Detected change in 'C:\\Users\\wachterr\\Documents\\flask_HSM\\routes.py', reloading
+2022-09-14 13:11:45,564 - INFO -  * Restarting with stat
+2022-09-14 13:11:45,564 - INFO -  * Restarting with stat
+2022-09-14 13:11:45,564 - INFO -  * Restarting with stat
+2022-09-14 13:11:46,543 - WARNING -  * Debugger is active!
+2022-09-14 13:11:46,543 - WARNING -  * Debugger is active!
+2022-09-14 13:11:46,543 - WARNING -  * Debugger is active!
+2022-09-14 13:11:46,546 - INFO -  * Debugger PIN: 893-582-709
+2022-09-14 13:11:46,546 - INFO -  * Debugger PIN: 893-582-709
+2022-09-14 13:11:46,546 - INFO -  * Debugger PIN: 893-582-709

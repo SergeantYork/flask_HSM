@@ -18,16 +18,13 @@
             <form method="POST" class="form-signin" style="color:black" enctype = "multipart/form-data">
                 {{ form.hidden_tag() }}
                         <h1>
-                            Signing a file
+                            Verify signature
                         </h1>
                                 <br>
-                                {{ form.api_key.label() }}
 
-                                {{ form.api_key(class="form-control", placeholder="Enter API key")}}
+                                {{ form.public_key.label() }}
 
-                                {{ form.key_name.label() }}
-
-                                {{ form.key_name(class="form-control", placeholder="Enter signing key")}}
+                                {{ form.public_key(class="form-control", placeholder="Enter public key in PKCS#1 format")}}
 
                                 {{ form.signing_alg.label() }}
 
