@@ -469,6 +469,7 @@ def verify_progress():
         alg = 'Sha384'
     if signing_algorithm == 'SHA2-512':
         alg = 'Sha512'
+
     # this part is for hard coded verification using DSM
     # api_key = ''
     # session['token'] = get_auth(api_end_point, api_key)
@@ -492,8 +493,8 @@ def verify_progress():
     #     logging.info('RSA-PKCSV1.5 verification result: {}'.format(verification_res))
     #     print('RSA-PKCSV1.5 verification result: {}'.format(verification_res))
 
-    pem_prefix = '-----BEGIN RSA PRIVATE KEY-----\n'
-    pem_suffix = '\n-----END RSA PRIVATE KEY-----'
+    pem_prefix = '-----BEGIN RSA PUBLIC KEY-----\n'
+    pem_suffix = '\n-----END RSA PUBLIC KEY-----'
     key = signing_key
     public_key = signing_key
     pem_key = '{}{}{}'.format(pem_prefix, public_key, pem_suffix)

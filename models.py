@@ -1,6 +1,6 @@
 """Form object declaration."""
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, TextAreaField, SelectField
+from wtforms import StringField, TextAreaField, SelectField
 
 
 class SigningField(FlaskForm):
