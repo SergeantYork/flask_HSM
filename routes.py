@@ -53,21 +53,21 @@ logger.setLevel(logging.INFO)
 logger.addHandler(handler)
 
 
-@app.route('/', methods=['GET', 'POST'])
-def login():
-    form = Login()
-    if form.is_submitted():
-        session['user_name'] = form.user_name.data
-        session['password'] = form.password.data
-        user_name = session.get('user_name', None)
-        password = session.get('password', None)
-        logging.info("user name: {}".format(user_name))
-        logging.info("password: {}".format(password))
-        return render_template('index.html')
-    return render_template('login.html', form=form)
+# @app.route('/', methods=['GET', 'POST'])
+# def login():
+#     form = Login()
+#     if form.is_submitted():
+#         session['user_name'] = form.user_name.data
+#         session['password'] = form.password.data
+#         user_name = session.get('user_name', None)
+#         password = session.get('password', None)
+#         logging.info("user name: {}".format(user_name))
+#         logging.info("password: {}".format(password))
+#         return render_template('index.html')
+#     return render_template('login.html', form=form)
 
 
-@app.route('/signing')
+@app.route('/')
 def home_page():
     return render_template('index.html')
 
@@ -459,7 +459,7 @@ def verify_progress():
     signing_type = session.get('signing_type', None)
     logging.info("the digest value : {}".format(user_digest))
     logging.info('the user digest length :{}'.format(len(user_digest)))
-    api_end_point = end_point
+    # api_end_point = end_point
 
     if signing_algorithm == 'SHA2-224':
         alg = 'Sha224'
@@ -495,7 +495,6 @@ def verify_progress():
 
     pem_prefix = '-----BEGIN RSA PUBLIC KEY-----\n'
     pem_suffix = '\n-----END RSA PUBLIC KEY-----'
-    key = signing_key
     public_key = signing_key
     pem_key = '{}{}{}'.format(pem_prefix, public_key, pem_suffix)
     logging.info('{}'.format(pem_key))

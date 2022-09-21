@@ -1,0 +1,237 @@
+2022-09-21 12:11:09,581 - INFO - download_path: C:\Users\wachterr\Documents\flask_HSM/static//my_picture.PNG_1663751469.5761302_log.txt
+2022-09-21 12:11:09,581 - INFO - download_path: C:\Users\wachterr\Documents\flask_HSM/static//my_picture.PNG_1663751469.5761302_log.txt
+2022-09-21 12:11:09,581 - INFO - download_path: C:\Users\wachterr\Documents\flask_HSM/static//my_picture.PNG_1663751469.5761302_log.txt
+2022-09-21 12:11:09,582 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:09] "GET /download_log HTTP/1.1" 200 -
+2022-09-21 12:11:09,582 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:09] "GET /download_log HTTP/1.1" 200 -
+2022-09-21 12:11:09,582 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:09] "GET /download_log HTTP/1.1" 200 -
+2022-09-21 12:11:38,014 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-21 12:11:38,014 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-21 12:11:38,014 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-21 12:11:38,014 - INFO - the user digest length :44
+2022-09-21 12:11:38,014 - INFO - the user digest length :44
+2022-09-21 12:11:38,014 - INFO - the user digest length :44
+2022-09-21 12:11:38,015 - INFO - -----BEGIN RSA PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PUBLIC KEY-----
+2022-09-21 12:11:38,015 - INFO - -----BEGIN RSA PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PUBLIC KEY-----
+2022-09-21 12:11:38,015 - INFO - -----BEGIN RSA PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PUBLIC KEY-----
+2022-09-21 12:11:38,018 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-21 12:11:38,018 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-21 12:11:38,018 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-21 12:11:38,018 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-21 12:11:38,018 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-21 12:11:38,018 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-21 12:11:38,018 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-21 12:11:38,018 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-21 12:11:38,018 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-21 12:11:38,018 - INFO - python verification successful None
+2022-09-21 12:11:38,018 - INFO - python verification successful None
+2022-09-21 12:11:38,018 - INFO - python verification successful None
+2022-09-21 12:11:38,018 - INFO - python verification successful None
+2022-09-21 12:11:38,018 - INFO - python verification successful None
+2022-09-21 12:11:38,018 - INFO - python verification successful None
+2022-09-21 12:11:38,018 - INFO - verification was successful
+2022-09-21 12:11:38,018 - INFO - verification was successful
+2022-09-21 12:11:38,018 - INFO - verification was successful
+2022-09-21 12:11:38,021 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:38] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-21 12:11:38,021 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:38] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-21 12:11:38,021 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:38] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-21 12:11:38,038 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:11:38,038 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:11:38,038 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:38] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:11:38,092 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:38] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:11:38,092 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:38] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:11:38,092 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:38] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:11:38,334 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:38] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:11:38,334 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:38] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:11:38,334 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:38] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:11:40,714 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-21 12:11:40,714 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-21 12:11:40,714 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-21 12:11:40,714 - INFO - the user digest length :44
+2022-09-21 12:11:40,714 - INFO - the user digest length :44
+2022-09-21 12:11:40,714 - INFO - the user digest length :44
+2022-09-21 12:11:40,715 - INFO - -----BEGIN RSA PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PUBLIC KEY-----
+2022-09-21 12:11:40,715 - INFO - -----BEGIN RSA PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PUBLIC KEY-----
+2022-09-21 12:11:40,715 - INFO - -----BEGIN RSA PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PUBLIC KEY-----
+2022-09-21 12:11:40,718 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-21 12:11:40,718 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-21 12:11:40,718 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-21 12:11:40,718 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-21 12:11:40,718 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-21 12:11:40,718 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-21 12:11:40,718 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-21 12:11:40,718 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-21 12:11:40,718 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-21 12:11:40,718 - INFO - python verification successful None
+2022-09-21 12:11:40,718 - INFO - python verification successful None
+2022-09-21 12:11:40,718 - INFO - python verification successful None
+2022-09-21 12:11:40,718 - INFO - python verification successful None
+2022-09-21 12:11:40,718 - INFO - python verification successful None
+2022-09-21 12:11:40,718 - INFO - python verification successful None
+2022-09-21 12:11:40,719 - INFO - verification was successful
+2022-09-21 12:11:40,719 - INFO - verification was successful
+2022-09-21 12:11:40,719 - INFO - verification was successful
+2022-09-21 12:11:40,719 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:40] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-21 12:11:40,719 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:40] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-21 12:11:40,719 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:40] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-21 12:11:40,731 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:11:40,731 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:11:40,731 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:40] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:11:40,768 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:40] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:11:40,768 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:40] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:11:40,768 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:40] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:11:40,892 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:40] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:11:40,892 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:40] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:11:40,892 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:40] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:11:41,473 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:41] "GET /verify-sign HTTP/1.1" 200 -
+2022-09-21 12:11:41,473 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:41] "GET /verify-sign HTTP/1.1" 200 -
+2022-09-21 12:11:41,473 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:41] "GET /verify-sign HTTP/1.1" 200 -
+2022-09-21 12:11:42,927 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:42] "POST /verify-sign HTTP/1.1" 200 -
+2022-09-21 12:11:42,927 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:42] "POST /verify-sign HTTP/1.1" 200 -
+2022-09-21 12:11:42,927 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:42] "POST /verify-sign HTTP/1.1" 200 -
+2022-09-21 12:11:42,943 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:11:42,943 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:11:42,943 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:42] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:11:42,977 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:42] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:11:42,977 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:42] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:11:42,977 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:42] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:11:43,098 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:11:43,098 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:11:43,098 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:11:43,118 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-21 12:11:43,118 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-21 12:11:43,118 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-21 12:11:43,118 - INFO - the user digest length :44
+2022-09-21 12:11:43,118 - INFO - the user digest length :44
+2022-09-21 12:11:43,118 - INFO - the user digest length :44
+2022-09-21 12:11:43,118 - INFO - -----BEGIN RSA PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PUBLIC KEY-----
+2022-09-21 12:11:43,118 - INFO - -----BEGIN RSA PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PUBLIC KEY-----
+2022-09-21 12:11:43,118 - INFO - -----BEGIN RSA PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PUBLIC KEY-----
+2022-09-21 12:11:43,121 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-21 12:11:43,121 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-21 12:11:43,121 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-21 12:11:43,121 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-21 12:11:43,121 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-21 12:11:43,121 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-21 12:11:43,122 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-21 12:11:43,122 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-21 12:11:43,122 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-21 12:11:43,122 - INFO - python verification successful None
+2022-09-21 12:11:43,122 - INFO - python verification successful None
+2022-09-21 12:11:43,122 - INFO - python verification successful None
+2022-09-21 12:11:43,122 - INFO - python verification successful None
+2022-09-21 12:11:43,122 - INFO - python verification successful None
+2022-09-21 12:11:43,122 - INFO - python verification successful None
+2022-09-21 12:11:43,122 - INFO - verification was successful
+2022-09-21 12:11:43,122 - INFO - verification was successful
+2022-09-21 12:11:43,122 - INFO - verification was successful
+2022-09-21 12:11:43,124 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-21 12:11:43,124 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-21 12:11:43,124 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-21 12:11:43,140 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:11:43,140 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:11:43,140 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:11:43,177 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:11:43,177 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:11:43,177 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:11:43,304 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:11:43,304 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:11:43,304 - INFO - 127.0.0.1 - - [21/Sep/2022 12:11:43] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:12:14,187 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-21 12:12:14,187 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-21 12:12:14,187 - INFO - the digest value : l3mHU/9Vw2Re1nl6A8xdrrMVyCpisVs0/tCivDbE+4Q=
+2022-09-21 12:12:14,187 - INFO - the user digest length :44
+2022-09-21 12:12:14,187 - INFO - the user digest length :44
+2022-09-21 12:12:14,187 - INFO - the user digest length :44
+2022-09-21 12:12:14,187 - INFO - -----BEGIN RSA PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PUBLIC KEY-----
+2022-09-21 12:12:14,187 - INFO - -----BEGIN RSA PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PUBLIC KEY-----
+2022-09-21 12:12:14,187 - INFO - -----BEGIN RSA PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQGrDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIGiEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Apwavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonzvQIDAQAB
+-----END RSA PUBLIC KEY-----
+2022-09-21 12:12:14,191 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-21 12:12:14,191 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-21 12:12:14,191 - INFO - The public key direct import: [b'-----BEGIN PUBLIC KEY-----', b'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArdiSAAAXb/cqcn1fnUQG', b'rDDIyZXXHbk6VyNb+mU6lIh2enWouR4drRvHYQJENvrct26s2S13D16ETx+7DQIG', b'iEXbrpPzSwGwhzgnQpvV94o4XQZGSrCFb51vSB2vLv9AaFd/hEHVMCJ7GgAI3LE6', b'xd7a0Bj6pJWuhUogsoZLauzvwthwpKH06lKo9sUjV4SZWruTVqbXSvOcALMEJ/Ap', b'wavf5ssdxunUPd4U2HDP5kAZlpYiG9Lq1+QRnL/sO2m4dCx8oaJiYlQvWBCV4/6+', b'YEcL9cpjoO3s3IeWZ1V6imMS7u1X9+y0WOG+j8Lu0UTGnB26Wx6iX8i8lAfIuonz', b'vQIDAQAB', b'-----END PUBLIC KEY-----']
+2022-09-21 12:12:14,191 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-21 12:12:14,191 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-21 12:12:14,191 - INFO - *****The user_digest length: 32
+ and value b'\x97y\x87S\xffU\xc3d^\xd6yz\x03\xcc]\xae\xb3\x15\xc8*b\xb1[4\xfe\xd0\xa2\xbc6\xc4\xfb\x84'
+2022-09-21 12:12:14,191 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-21 12:12:14,191 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-21 12:12:14,191 - INFO - *****The user_signature length: 256
+ and value b'y\x94\xa2\xb6<7\x16\xe7\xf25\x080\xa3Kl\x19\xca\x1d\x8d==\x10Gtg\x90v\xa5\xed\x0e-#N\xf7M\x9a\x8c\x84h\xbd\xd5\xa5\x80\xd5\x10\x8b\xce\xb5\x10d\x1d>\xd0\x84ei\xe26\xf3[)\xa8~\x1b}\x97#\x13\xdf\xfc\xc0\x19\t\xaea\x8e\x96+[x\\\x9e\x07u\xb0\x02K\xda\xd7):\xc5\n\xa7\xbc\xe2\n\x8a\x02\xbaR\xe2\x1eG\xf3\xc4P\xa3 g\xac\xc3\x99\xc6X\xce\xd9!\x85.\xbe\xf9PJ@A\x10h\x02L\xd5\xb9\\]h-\xdb\xcf\x084y\x99\xb3\xab|m\x86\x1c\x82\x80\xd0\x86\x1a\xae\x95ES\x12/\xd0: \xb6\xcc\xd7\xf9\x15\x81\x05&\xc5=\xf3p\xb2\x16\xe3H\xb5\xe3\xeb\xa0+\xa2\xff#\x05\x06\xef\x9f\x1e\x85\xb9l\x85!\xce+\t\xdf\x99\xc4\xaa\xd3\xd1\x12\xa1\xb9Y\x04\x10#l\xd1DHp\x8d\x8e\x8c\x96\xcf\x7f\x83r\xd7\xa79\xdd\x13\xbb\xb6\x84O\x1ed$]>\xe0\x16\xb5\x88;\xbd\xe1$\xd8\n\x00C\x83\x83\xc57\x19'
+2022-09-21 12:12:14,191 - INFO - python verification successful None
+2022-09-21 12:12:14,191 - INFO - python verification successful None
+2022-09-21 12:12:14,191 - INFO - python verification successful None
+2022-09-21 12:12:14,191 - INFO - python verification successful None
+2022-09-21 12:12:14,191 - INFO - python verification successful None
+2022-09-21 12:12:14,191 - INFO - python verification successful None
+2022-09-21 12:12:14,191 - INFO - verification was successful
+2022-09-21 12:12:14,191 - INFO - verification was successful
+2022-09-21 12:12:14,191 - INFO - verification was successful
+2022-09-21 12:12:14,194 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:14] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-21 12:12:14,194 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:14] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-21 12:12:14,194 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:14] "GET /verify-progress HTTP/1.1" 200 -
+2022-09-21 12:12:14,208 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:14] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:12:14,208 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:14] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:12:14,208 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:14] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:12:14,261 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:14] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:12:14,261 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:14] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:12:14,261 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:14] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:12:14,716 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:14] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:12:14,716 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:14] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:12:14,716 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:14] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:12:20,008 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:20] "GET / HTTP/1.1" 200 -
+2022-09-21 12:12:20,008 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:20] "GET / HTTP/1.1" 200 -
+2022-09-21 12:12:20,008 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:20] "GET / HTTP/1.1" 200 -
+2022-09-21 12:12:20,023 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:12:20,023 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:12:20,023 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+2022-09-21 12:12:20,063 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:20] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:12:20,063 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:20] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:12:20,063 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:20] "[36mGET /static/logo.png HTTP/1.1[0m" 304 -
+2022-09-21 12:12:20,185 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:20] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:12:20,185 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:20] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
+2022-09-21 12:12:20,185 - INFO - 127.0.0.1 - - [21/Sep/2022 12:12:20] "[36mGET /static/home.jpg HTTP/1.1[0m" 304 -
