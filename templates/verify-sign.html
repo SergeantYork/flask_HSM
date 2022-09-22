@@ -36,11 +36,11 @@
 
                                 {{ form.digest.label() }}
 
-                                {{ form.digest(class="form-control", size =1) }}
+                                {{ form.digest(class="form-control", placeholder="Enter digest in base64 format")}}
 
                                 {{ form.signature.label() }}
 
-                                {{ form.signature(class="form-control", size =1) }}
+                                {{ form.signature(class="form-control", placeholder="Enter signature in base64 format")}}
                                 <br>
                                 <input class="btn btn-lg btn-block btn-primary" type="submit">
                         </form>

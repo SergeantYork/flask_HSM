@@ -37,9 +37,9 @@ app.config["UPLOAD_FOLDER"] = "static/"
 end_point = "https://eu.smartkey.io/"
 default_value = '0'
 
-# PATH = os.path.dirname(sys.executable)  # for .exe only
+PATH = os.path.dirname(sys.executable)  # for .exe only
 
-PATH = os.path.dirname(os.path.realpath(__file__))  # for development only
+# PATH = os.path.dirname(os.path.realpath(__file__))  # for development only
 
 # sys.stdout = sys.stderr = open('static/flask_server.log', 'wt')
 
@@ -112,7 +112,10 @@ def sign_rsa(api_end_point, api_key, key, hash_value, alg, path):
 
     logging.info('{}_signature.{}'.format(path, file_ending))
     append_new_line('{}_signature.{}'.format(path, file_ending),
-                    "signature type RSA \n{}\n hash_value: {}".format(signature_string, hash_value))
+                    "signature type RSA-PKCSV1.5: \n{}\n algorithm: {}\n hash_value:\n{}".format(signature_string
+                                                                                                 ['body']['signature'],
+                                                                                                 alg,
+                                                                                                 hash_value))
     termcolor.cprint('The process finished your signature is ready please download from web page', 'green')
 
     logging.info('Request approved')
@@ -159,7 +162,10 @@ def sign_rsa_pss(api_end_point, api_key, key, hash_value, alg, path):
         f.write('Request response:')
     logging.info('{}_signature.{}'.format(path, file_ending))
     append_new_line('{}_signature.{}'.format(path, file_ending),
-                    "signature type RSA_PSS \n {}\n hash_value: {}".format(signature_string, hash_value))
+                    "signature type RSA-PSS: \n{}\n algorithm: {}\n hash_value:\n{}".format(signature_string
+                                                                                            ['body']['signature'],
+                                                                                            alg,
+                                                                                            hash_value))
     termcolor.cprint('The process finished your signature is ready please download from web page', 'green')
 
     logging.info('Request approved')
@@ -662,4 +668,4 @@ def not_found(e):
 
 # Run the application
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)  # For exe switch to False
